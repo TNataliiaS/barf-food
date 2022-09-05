@@ -1,0 +1,7 @@
+@import "./mixins";
+
+@include font-face('Montserrat', 'MontserratRegular');
+@include font-face('Montserrat', 'MontserratMedium', 500);
+@include font-face('Montserrat', 'MontserratSemiBold', 600);
+@include font-face('Oswald', 'OswaldBold', 700);
+@include font-face('Roboto', 'RobotoBold', 700);

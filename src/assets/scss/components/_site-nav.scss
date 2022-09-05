@@ -1,0 +1,43 @@
+.site-nav {
+    display: flex;
+
+    &__item {
+        margin-right: 33px;
+
+        &:last-child {
+            margin-right: 12px;
+        }
+    }
+
+    &__link {
+        padding: 3px 10px;
+
+        font-weight: 500;
+        color: $primary-color;
+
+        position: relative;
+
+        &:after {
+            content: '';
+            display: block;
+            width: calc(100% - 20px);
+            height: 2px;
+
+            position: absolute;
+            top: 100%;
+            left: 50%;
+
+            background-color: $color-сomponents;
+            opacity: 0;
+
+            transform: translateX(-50%);
+            transition: opacity .2s linear;
+        }
+
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+}
