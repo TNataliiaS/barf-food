@@ -1,0 +1,25 @@
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 13px 42px;
+
+    font-size: inherit;
+    font-weight: 600;
+    line-height: 1.4;
+    color: $primary-color;
+    text-align: center;
+
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: background-color .2s linear;
+
+    &--primary {
+        background-color: $color-сomponents;
+
+        &:hover {
+            background-color: #75110D;
+        }
+    }
+}
