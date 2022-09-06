@@ -40,6 +40,7 @@ const path = {
         css:    buildPath + "assets/css/",
         js:     buildPath + "assets/js/",
         images: buildPath + "assets/images/",
+        svgsprite: buildPath + "/assets/images/sprite/*.svg",
         fonts:  buildPath + "assets/fonts/"
     },
     src: {
@@ -55,6 +56,7 @@ const path = {
         css:    srcPath + "assets/scss/**/*.scss",
         js:     srcPath + "assets/js/**/*.js",
         images: srcPath + "assets/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp}",
+        svgsprite: srcPath + "assets/images/sprite/*.svg",
         fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
     clean: "./" + buildPath
@@ -138,7 +140,7 @@ function js() {
 }
 
 function images() {
-    return gulp.src(["src/assets/images/**/*", "!src/assets/images/sprite", "!src/assets/images/sprite/*"])
+    return gulp.src([path.src.images, "!src/assets/images/sprite/*.svg"])
         .pipe(plumber({
             errorHandler : function(err) {
                 notify.onError({
@@ -151,7 +153,7 @@ function images() {
         .pipe(newer(path.build.images))
         .pipe(webp())
         .pipe(gulp.dest(path.build.images))
-        .pipe(gulp.src(["src/assets/images/**/*", "!src/assets/images/sprite", "!src/assets/images/sprite/*"]))
+        .pipe(gulp.src([path.src.images, "!src/assets/images/sprite/*.svg"]))
         .pipe(newer(path.build.images))
         .pipe(imagemin())
         .pipe(gulp.dest(path.build.images))
@@ -169,6 +171,7 @@ function svgsprite() {
                 this.emit('end');
             }
         }))
+        .pipe(newer(path.build.svgsprite))
         .pipe(svgSprite({
             mode: {
                 stack: {
@@ -221,10 +224,11 @@ function watchFiles() {
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.images], images);
+    gulp.watch([path.watch.svgsprite], svgsprite);
     gulp.watch([path.watch.fonts], fonts);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
+const build = gulp.series(clean, gulp.parallel(html, css, js, images, svgsprite, fonts));
 const watch = gulp.parallel(build, watchFiles, server);
 
 

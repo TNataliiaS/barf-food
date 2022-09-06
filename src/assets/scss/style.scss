@@ -5,11 +5,13 @@
 @import "./base";
 
 /* Components */
-// @import "./components/page";
+@import "./components/page";
 @import "./components/header";
 @import "./components/logo";
 @import "./components/site-nav";
 @import "./components/burger";
 @import "./components/intro";
 @import "./components/btn";
-// @import "./components/section";
+@import "./components/section";
+@import "./components/about-product";
+@import "./components/info-slider";
