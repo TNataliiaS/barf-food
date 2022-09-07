@@ -22,4 +22,16 @@
             background-color: #75110D;
         }
     }
+
+    &--secondary {
+        color: $color-сomponents;
+
+        border: 1px solid $color-сomponents;
+        background-color: transparent;
+
+        &:hover {
+            border-color: $element-color;
+            background-color: $element-color;
+        }
+    }
 }
