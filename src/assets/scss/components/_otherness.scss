@@ -1,0 +1,38 @@
+.otherness {
+    padding: 2px 0 7px;
+
+    background-image: url('../images/otherness-decorative-line.png');
+    background-repeat: no-repeat;
+    background-position: top 63px center;
+
+    &__wrapper {
+        padding-top: 56px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        flex-basis: calc((100% - 24px * 3) / 4);
+        color: $secondary-color;
+
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+
+    &__item-icon {
+        margin-bottom: 9px;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.3;
+
+        > span:nth-child(2) {
+            display: none;
+        }
+    }
+}
