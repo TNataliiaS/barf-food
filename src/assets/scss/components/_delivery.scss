@@ -1,0 +1,30 @@
+.delivery {
+    padding-top: 77px;
+
+    &__item {
+        position: relative;
+
+        &:after {
+            content: url('../images/delivery/arrow.png');
+            width: 139px;
+
+            position: absolute;
+            top: 12px;
+            right: 25px;
+        }
+    }
+
+    &__item-icon {
+        margin-bottom: 11px;
+    }
+
+    &__title {
+        margin-bottom: 5px;
+    }
+
+    &__description {
+        span {
+            color: $color-сomponents;
+        }
+    }
+}
