@@ -1,0 +1,47 @@
+.footer {
+    &__inner {
+        padding-top: 81px;
+        padding-bottom: 68px;
+
+        color: $primary-color;
+
+        background-color: $color-сomponents;
+        background-image: url(../images/footer-background-left.svg), url(../images/footer-background-right.svg);
+        background-repeat: no-repeat;
+        background-position: left 0 bottom -28px, right 0 top 0;
+
+        position: relative;
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__image {
+        position: absolute;
+
+        &--dog {
+            width: 110px;
+            height: 110px;
+
+            top: 90px;
+            left: 470px;
+        }
+
+        &--meat {
+            width: 174px;
+            height: 192px;
+
+            top: 221px;
+            left: 415px;
+        }
+
+        &--apple {
+            width: 104px;
+            height: 103px;
+
+            bottom: 8px;
+            right: 41px;
+        }
+    }
+}

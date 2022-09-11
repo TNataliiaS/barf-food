@@ -100,7 +100,7 @@ function css() {
             cascade: true
         }))
         .pipe(gcmq())
-        // .pipe(gulp.dest(path.build.css))
+        .pipe(gulp.dest(path.build.css))
         .pipe(cleanCSS({
             level: {
                 1: {
