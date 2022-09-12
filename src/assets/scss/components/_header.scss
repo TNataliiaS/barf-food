@@ -12,5 +12,9 @@
         justify-content: space-between;
         align-items: center;
         height: 112px;
+
+        @include breakpoint($breakpoint-xs) {
+            height: 70px;
+        }
     }
 }

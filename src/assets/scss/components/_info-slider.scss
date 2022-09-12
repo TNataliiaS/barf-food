@@ -6,6 +6,12 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    @include breakpoint($breakpoint-xs) {
+        background-image: url('../images/info-decorative-line-mobile.png');
+        background-position: top left 41px;
+        padding: 56px 49px 70px;
+    }
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -21,6 +27,14 @@
         max-width: 449px;
         height: 225px;
         flex-grow: 1;
+
+        @include breakpoint($breakpoint-xs) {
+            height: auto;
+
+            &:nth-child(1) {
+                display: none;
+            }
+        }
 
         &:first-of-type {
             margin-right: 40px;
@@ -41,6 +55,10 @@
     &__list {
         &:first-of-type {
             margin-right: 72px;
+
+            @include breakpoint($breakpoint-xs) {
+                margin-right: 0;
+            }
         }
     }
 
@@ -60,5 +78,10 @@
     &__icon {
         width: 20px;
         height: 20px;
+
+        @include breakpoint($breakpoint-xs) {
+            width: 24px;
+            height: 24px;
+        }
     }
 }

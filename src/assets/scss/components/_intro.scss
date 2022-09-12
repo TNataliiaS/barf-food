@@ -13,6 +13,13 @@
 
     position: relative;
 
+    @include breakpoint($breakpoint-xs) {
+        margin-bottom: 24px;
+        height: 746px;
+
+        background-image: url('../images/intro-bg-mobile.jpg');
+    }
+
     &__inner {
         width: 100%;
         max-width: 460px;
@@ -32,6 +39,14 @@
         font-weight: 400;
 
         order: 2;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 47px;
+            max-width: 230px;
+
+            font-size: 18px;
+        }
+
     }
 
     &__subtitle {
@@ -44,10 +59,31 @@
         letter-spacing: 0.02em;
 
         order: 1;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-top: 35px;
+            margin-bottom: 25px;
+
+            font-size: 44px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__text-desktop {
+        @include breakpoint($breakpoint-xs) {
+            display: none;
+        }
     }
 
     &__text-mobile {
         display: none;
+
+        @include breakpoint($breakpoint-xs) {
+            display: inline;
+        }
     }
 
     &__decorative {
@@ -59,6 +95,14 @@
         z-index: -1;
 
         transform: rotate(5deg);
+
+        @include breakpoint($breakpoint-xs) {
+            width: 187px;
+            height: 98px;
+
+            top: 73px;
+            left: -6px;
+        }
     }
 
     &__btn {
@@ -74,5 +118,13 @@
         top: 160px;
         left: calc(100% - 147px);
         z-index: 2;
+
+        @include breakpoint($breakpoint-xs) {
+            width: 156px;
+            height: 334px;
+
+            top: 405px;
+            left: calc(100% - 126px);
+        }
     }
 }
