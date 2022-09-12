@@ -1,3 +1,33 @@
 .burger {
     display: none;
+    width: 32px;
+    height: 24px;
+    padding: 3px 0 3px 3px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    position: relative;
+
+    font-size: 0;
+    color: transparent;
+
+    @include breakpoint($breakpoint-xs) {
+        display: block;
+        margin-top: -6px;
+    }
+
+    &__line {
+        display: block;
+        width: 29px;
+        height: 2px;
+
+        border-radius: 1px;
+        background-color: $primary-color;
+
+        &:nth-child(2) {
+            margin: 6px 0;
+        }
+    }
 }

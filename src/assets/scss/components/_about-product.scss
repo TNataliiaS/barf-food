@@ -1,21 +1,36 @@
 .about-product {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto auto;
+    @extend %grid-columns;
     column-gap: 24px;
     row-gap: 80px;
+
+    @include breakpoint($breakpoint-xs) {
+        row-gap: 0;
+    }
 
     &__content {
         grid-column: 1 / span 6;
         padding-top: 56px;
+
+        @include breakpoint($breakpoint-xs) {
+            grid-column: 1 / -1;
+            margin-bottom: 39px;
+        }
     }
 
     &__title {
         margin-bottom: 32px;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 25px;
+        }
     }
 
     &__text {
         margin-bottom: 24px;
+
+        @include breakpoint($breakpoint-xs) {
+            line-height: 1.5;
+        }
     }
 
     &__list-title {
@@ -40,10 +55,8 @@
             border-radius: 50%;
 
             position: absolute;
-            top: 50%;
+            top: 9px;
             left: 0;
-
-            transform: translateY(-50%);
         }
 
         &:not(:last-child) {
@@ -53,6 +66,11 @@
 
     &__image {
         grid-column: 7 / -1;
+
+        @include breakpoint($breakpoint-xs) {
+            grid-column: 1 / -1;
+            justify-self: center;
+        }
     }
 
     &__slider {

@@ -37,7 +37,8 @@
 .rations__slider,
 .rations__header,
 .sets__slider,
-.sets__header {
+.sets__header,
+.about-product {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   -moz-column-gap: 24px;
@@ -213,6 +214,27 @@ button {
 
 .burger {
   display: none;
+  width: 32px;
+  height: 24px;
+  padding: 3px 0 3px 3px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 0;
+  color: transparent;
+}
+
+.burger__line {
+  display: block;
+  width: 29px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #fff;
+}
+
+.burger__line:nth-child(2) {
+  margin: 6px 0;
 }
 
 .intro {
@@ -351,9 +373,6 @@ button {
 }
 
 .about-product {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto auto;
   -moz-column-gap: 24px;
   column-gap: 24px;
   row-gap: 80px;
@@ -392,9 +411,8 @@ button {
   background-color: #961914;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
+  top: 9px;
   left: 0;
-  transform: translateY(-50%);
 }
 
 .about-product__item:not(:last-child) {
@@ -1337,4 +1355,118 @@ button {
 
 .copyright__link:not(:last-child) {
   margin-right: 57px;
+}
+
+@media (max-width: 375px) {
+  .header__nav {
+    height: 70px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    margin-top: -6px;
+  }
+
+  .intro {
+    margin-bottom: 24px;
+    height: 746px;
+    background-image: url("../images/intro-bg-mobile.jpg");
+  }
+
+  .intro__title {
+    margin-bottom: 47px;
+    max-width: 230px;
+    font-size: 18px;
+  }
+
+  .intro__subtitle {
+    margin-top: 35px;
+    margin-bottom: 25px;
+    font-size: 44px;
+  }
+
+  .intro__subtitle br {
+    display: none;
+  }
+
+  .intro__text-desktop {
+    display: none;
+  }
+
+  .intro__text-mobile {
+    display: inline;
+  }
+
+  .intro__decorative {
+    width: 187px;
+    height: 98px;
+    top: 73px;
+    left: -6px;
+  }
+
+  .intro__zooov {
+    width: 156px;
+    height: 334px;
+    top: 405px;
+    left: calc(100% - 126px);
+  }
+
+  .section__title {
+    font-size: 40px;
+  }
+
+  .about-product {
+    row-gap: 0;
+  }
+
+  .about-product__content {
+    grid-column: 1/-1;
+    margin-bottom: 39px;
+  }
+
+  .about-product__title {
+    margin-bottom: 25px;
+  }
+
+  .about-product__text {
+    line-height: 1.5;
+  }
+
+  .about-product__image {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+
+  .info-slider {
+    background-image: url("../images/info-decorative-line-mobile.png");
+    background-position: top left 41px;
+    padding: 56px 49px 70px;
+  }
+
+  .info-slider__item {
+    height: auto;
+  }
+
+  .info-slider__item:nth-child(1) {
+    display: none;
+  }
+
+  .info-slider__list:first-of-type {
+    margin-right: 0;
+  }
+
+  .info-slider__icon {
+    width: 24px;
+    height: 24px;
+  }
 }

@@ -1,6 +1,10 @@
 .site-nav {
     display: flex;
 
+    @include breakpoint($breakpoint-xs) {
+        display: none;
+    }
+
     &__item {
         margin-right: 33px;
 
