@@ -7,6 +7,10 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    @include breakpoint($breakpoint-xs) {
+        display: none;
+    }
+
     &__description {
         margin-bottom: 42px;
 
@@ -22,6 +26,10 @@
 
         background-color: $element-color;
 
+        @include breakpoint($breakpoint-xs) {
+            display: block;
+        }
+
         &__wrapper {
             max-width: 282px;
             margin: 0 auto;
@@ -33,6 +41,12 @@
         &__description {
             margin-bottom: 24px;
             font-size: 20px;
+        }
+    }
+
+    &__btn {
+        @include breakpoint($breakpoint-xs) {
+            margin-left: -10px;
         }
     }
 }

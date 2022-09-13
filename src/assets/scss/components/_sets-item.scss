@@ -79,6 +79,10 @@
     &__btn {
         margin-top: 17px;
         margin-right: auto;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-top: 13px;
+        }
     }
 
 }

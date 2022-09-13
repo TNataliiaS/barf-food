@@ -20,5 +20,15 @@
 
     &__description {
         color: $secondary-color;
+
+        @include breakpoint($breakpoint-xs) {
+            font-size: 14px;
+        }
+    }
+
+    &--mobile-indent {
+        @include breakpoint($breakpoint-xs) {
+            padding-bottom: 54px;
+        }
     }
 }
