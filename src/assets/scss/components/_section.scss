@@ -1,6 +1,10 @@
 .section {
     padding-bottom: 160px;
 
+    @include breakpoint($breakpoint-xs) {
+        padding-bottom: 80px;
+    }
+
     &:last-of-type {
         padding-bottom: 154px;
     }
