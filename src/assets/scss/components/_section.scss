@@ -10,11 +10,8 @@
     }
 
     &__title {
-        font-family: 'Oswald', sans-serif;
+        @extend %font-family-second;
         font-size: 46px;
-        line-height: 1.3;
-        font-weight: 700;
-        letter-spacing: 0.02em;
         color: $secondary-color;
 
         @include breakpoint($breakpoint-xs) {

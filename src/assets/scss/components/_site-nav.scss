@@ -1,5 +1,5 @@
 .site-nav {
-    display: flex;
+    @extend %flex-align-center;
 
     @include breakpoint($breakpoint-xs) {
         display: none;

@@ -11,6 +11,19 @@
         display: none;
     }
 
+    &--mobile {
+        display: none;
+        grid-column: 1 / -1;
+        padding: 0;
+
+        background-image: url('../images/calculator-decorative-element-mobile.png');
+        background-position: top center;
+
+        @include breakpoint($breakpoint-xs) {
+            display: block;
+        }
+    }
+
     &__description {
         margin-bottom: 42px;
 
@@ -18,30 +31,19 @@
         font-weight: 500;
         letter-spacing: 0.02em;
         color: $secondary-color;
-    }
 
-    &--mobile {
-        display: none;
-        grid-column: 1 / -1;
-
-        background-color: $element-color;
-
-        @include breakpoint($breakpoint-xs) {
-            display: block;
-        }
-
-        &__wrapper {
-            max-width: 282px;
-            margin: 0 auto;
-            padding: 32px 0;
-
-            text-align: center;
-        }
-
-        &__description {
+        &--mobile {
             margin-bottom: 24px;
             font-size: 20px;
         }
+    }
+
+    &__wrapper {
+        max-width: 282px;
+        margin: 0 auto;
+        padding: 32px 0;
+
+        text-align: center;
     }
 
     &__btn {
