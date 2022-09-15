@@ -6,6 +6,14 @@
         flex-basis: calc((100% - 24px * 3) / 4);
         color: $secondary-color;
 
+        @include breakpoint($breakpoint-xs) {
+            flex-basis: auto;
+
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+
         &:not(:last-child) {
             margin-right: 24px;
         }

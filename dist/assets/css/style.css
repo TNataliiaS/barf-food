@@ -368,6 +368,17 @@ button {
   color: #000;
 }
 
+.section__title--rays {
+  position: relative;
+}
+
+.section__title--rays:after {
+  content: url("../images/rays-down.png");
+  position: absolute;
+  top: 27px;
+  left: 24%;
+}
+
 .section__description {
   color: #000;
 }
@@ -897,8 +908,22 @@ button {
   background-position: top 63px center;
 }
 
-.otherness__wrapper {
-  padding-top: 56px;
+.otherness__section-title {
+  margin-bottom: 60px;
+  line-height: 1.2;
+}
+
+.otherness__item-rays {
+  position: relative;
+}
+
+.otherness__item-rays:after {
+  content: url("../images/rays-up.png");
+  width: 34px;
+  height: 30px;
+  position: absolute;
+  top: -27px;
+  left: -17px;
 }
 
 .otherness__item-icon {
@@ -910,6 +935,10 @@ button {
 }
 
 .otherness__title > span:nth-child(2) {
+  display: none;
+}
+
+.otherness__text-mobile {
   display: none;
 }
 
@@ -1441,6 +1470,11 @@ button {
     font-size: 40px;
   }
 
+  .section__title--rays:after {
+    top: 25px;
+    left: 75%;
+  }
+
   .section__description {
     font-size: 14px;
   }
@@ -1607,7 +1641,7 @@ button {
 
   .norms {
     padding-top: 44px;
-    padding-bottom: 24px;
+    padding-bottom: 25px;
   }
 
   .norms__header {
@@ -1695,5 +1729,40 @@ button {
 
   .norms__info {
     font-size: 14px;
+  }
+
+  .structure__item {
+    flex-basis: auto;
+  }
+
+  .structure__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .otherness {
+    padding-bottom: 0;
+    margin-bottom: -3px;
+  }
+
+  .otherness__section-title {
+    margin-bottom: 42px;
+  }
+
+  .otherness__item-rays:after {
+    top: -17px;
+    left: 27px;
+    transform: rotate(87deg);
+  }
+
+  .otherness__description br {
+    display: none;
+  }
+
+  .otherness__text-desktop {
+    display: none;
+  }
+
+  .otherness__text-mobile {
+    display: inline;
   }
 }

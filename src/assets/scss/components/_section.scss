@@ -17,6 +17,24 @@
         @include breakpoint($breakpoint-xs) {
             font-size: 40px;
         }
+
+        &--rays {
+            position: relative;
+
+            &:after {
+                content: url('../images/rays-down.png');
+
+                position: absolute;
+                top: 27px;
+                left: 24%;
+
+                @include breakpoint($breakpoint-xs) {
+                    top: 25px;
+                    left: 75%;
+                }
+
+            }
+        }
     }
 
     &__description {

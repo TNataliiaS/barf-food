@@ -5,8 +5,38 @@
     background-repeat: no-repeat;
     background-position: top 63px center;
 
-    &__wrapper {
-        padding-top: 56px;
+    @include breakpoint($breakpoint-xs) {
+        padding-bottom: 0;
+        margin-bottom: -3px;
+    }
+
+    &__section-title {
+        margin-bottom: 60px;
+        line-height: 1.2;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 42px;
+        }
+    }
+
+    &__item-rays {
+        position: relative;
+
+        &:after {
+            content: url('../images/rays-up.png');
+            width: 34px;
+            height: 30px;
+
+            position: absolute;
+            top: -27px;
+            left: -17px;
+
+            @include breakpoint($breakpoint-xs) {
+                top: -17px;
+                left: 27px;
+                transform: rotate(87deg);
+            }
+        }
     }
 
     &__item-icon {
@@ -18,6 +48,28 @@
 
         > span:nth-child(2) {
             display: none;
+        }
+    }
+
+    &__description {
+        @include breakpoint($breakpoint-xs) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__text-desktop {
+        @include breakpoint($breakpoint-xs) {
+            display: none;
+        }
+    }
+
+    &__text-mobile {
+        display: none;
+
+        @include breakpoint($breakpoint-xs) {
+            display: inline;
         }
     }
 }
