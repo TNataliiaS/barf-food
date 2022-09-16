@@ -375,8 +375,8 @@ button {
 .section__title--rays:after {
   content: url("../images/rays-down.png");
   position: absolute;
-  top: 27px;
-  left: 24%;
+  bottom: -26px;
+  left: 100%;
 }
 
 .section__description {
@@ -903,12 +903,11 @@ button {
 
 .otherness {
   padding: 2px 0 7px;
-  background-image: url("../images/otherness-decorative-line.png");
-  background-repeat: no-repeat;
-  background-position: top 63px center;
+  position: relative;
 }
 
 .otherness__section-title {
+  display: inline-block;
   margin-bottom: 60px;
   line-height: 1.2;
 }
@@ -942,25 +941,38 @@ button {
   display: none;
 }
 
+.otherness__decorative {
+  width: 1440px;
+  height: 236px;
+  stroke: #000;
+  position: absolute;
+  top: 64px;
+  left: 0px;
+  z-index: -1;
+}
+
 .about-us {
+  overflow: hidden;
   background-color: #FFF4F3;
   position: relative;
 }
 
-.about-us:before,
-.about-us:after {
-  width: 676px;
+.about-us__decorative {
+  width: 1440px;
+  height: 236px;
   position: absolute;
-  top: 0;
-  left: 72px;
 }
 
-.about-us:before {
-  content: url("../images/about-us/about-us-decorative-line-1.png");
+.about-us__decorative--primary {
+  bottom: 300px;
+  left: -351px;
+  transform: rotate(-65deg);
 }
 
-.about-us:after {
-  content: url("../images/about-us/about-us-decorative-line-2.png");
+.about-us__decorative--second {
+  bottom: 295px;
+  left: -356px;
+  transform: rotate(-53deg);
 }
 
 .about-us__wrapper {
@@ -983,8 +995,9 @@ button {
 }
 
 .about-us__pictures-wrapper:before {
-  display: block;
-  content: url("../images/about-us/about-us-dog.png");
+  content: "";
+  background-image: url("../images/about-us/about-us-dog.png");
+  background-size: cover;
   width: 183px;
   height: 183px;
   position: absolute;
@@ -994,7 +1007,9 @@ button {
 }
 
 .about-us__pictures-wrapper:after {
-  content: url("../images/about-us/about-us-heart.png");
+  content: "";
+  background-image: url("../images/about-us/about-us-heart.png");
+  background-size: cover;
   width: 120px;
   height: 120px;
   position: absolute;
@@ -1003,14 +1018,20 @@ button {
   z-index: 3;
 }
 
-.about-us__primary-img {
+.about-us__img {
   position: absolute;
+}
+
+.about-us__img--primary {
+  width: 475px;
+  height: 562px;
   left: 0;
   z-index: 1;
 }
 
-.about-us__second-img {
-  position: absolute;
+.about-us__img--second {
+  width: 362px;
+  height: 389px;
   top: 356px;
   left: 194px;
   z-index: 2;
@@ -1470,11 +1491,6 @@ button {
     font-size: 40px;
   }
 
-  .section__title--rays:after {
-    top: 25px;
-    left: 75%;
-  }
-
   .section__description {
     font-size: 14px;
   }
@@ -1744,6 +1760,11 @@ button {
     margin-bottom: -3px;
   }
 
+  .otherness__section-title--rays:after {
+    bottom: -24px;
+    left: 97%;
+  }
+
   .otherness__section-title {
     margin-bottom: 42px;
   }
@@ -1764,5 +1785,60 @@ button {
 
   .otherness__text-mobile {
     display: inline;
+  }
+
+  .about-us__wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .about-us__pictures {
+    padding-top: 0;
+    padding-bottom: 454px;
+  }
+
+  .about-us__pictures-wrapper:before {
+    width: 101px;
+    height: 101px;
+    top: 261px;
+    left: 0px;
+  }
+
+  .about-us__pictures-wrapper:after {
+    width: 66px;
+    height: 66px;
+    top: 158px;
+    left: 261px;
+  }
+
+  .about-us__img--primary {
+    width: 261px;
+    height: auto;
+  }
+
+  .about-us__img--second {
+    width: 202px;
+    height: auto;
+    top: 196px;
+    left: 149px;
+  }
+
+  .about-us__content {
+    padding-top: 53px;
+    padding-bottom: 76px;
+  }
+
+  .about-us__title {
+    margin-bottom: 26px;
+  }
+
+  .about-us__title--rays:after {
+    content: url("../images/rays-up.png");
+    bottom: 22px;
+    left: 279px;
+    transform: rotate(71deg);
+  }
+
+  .about-us__title br {
+    display: none;
   }
 }
