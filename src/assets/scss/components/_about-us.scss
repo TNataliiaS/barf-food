@@ -1,26 +1,34 @@
 .about-us {
+    overflow: hidden;
+
     background-color: $section-accent-color;
     position: relative;
 
-    &:before,
-    &:after {
-        width: 676px;
+    &__decorative {
+        width: 1440px;
+        height: 236px;
 
         position: absolute;
-        top: 0;
-        left: 72px;
-    }
 
-    &:before {
-        content: url('../images/about-us/about-us-decorative-line-1.png');
-    }
+        &--primary {
+            bottom: 300px;
+            left: -351px;
+            transform: rotate(-65deg);
+        }
 
-    &:after {
-        content: url('../images/about-us/about-us-decorative-line-2.png');
+        &--second {
+            bottom: 295px;
+            left: -356px;
+            transform: rotate(-53deg);
+        }
     }
 
     &__wrapper {
         display: flex;
+
+        @include breakpoint($breakpoint-xs) {
+            flex-direction: column-reverse;
+        }
     }
 
     &__pictures,
@@ -33,14 +41,20 @@
         margin-right: 24px;
         padding-top: 80px;
         padding-bottom: 80px;
+
+        @include breakpoint($breakpoint-xs) {
+            padding-top: 0;
+            padding-bottom: 454px;
+        }
     }
 
     &__pictures-wrapper {
         position: relative;
 
         &:before {
-            display: block;
-            content: url('../images/about-us/about-us-dog.png');
+            content: '';
+            background-image: url('../images/about-us/about-us-dog.png');
+            background-size: cover;
             width: 183px;
             height: 183px;
 
@@ -48,10 +62,20 @@
             top: 475px;
             left: -55px;
             z-index: 2;
+
+            @include breakpoint($breakpoint-xs) {
+                width: 101px;
+                height: 101px;
+
+                top: 261px;
+                left: 0px;
+            }
         }
 
         &:after {
-            content: url('../images/about-us/about-us-heart.png');
+            content: '';
+            background-image: url('../images/about-us/about-us-heart.png');
+            background-size: cover;
             width: 120px;
             height: 120px;
 
@@ -59,26 +83,60 @@
             top: 287px;
             left: 415px;
             z-index: 3;
+
+            @include breakpoint($breakpoint-xs) {
+                width: 66px;
+                height: 66px;
+
+                top: 158px;
+                left: 261px;
+            }
         }
     }
 
-    &__primary-img  {
+    &__img {
         position: absolute;
-        left: 0;
-        z-index: 1;
-    }
 
-    &__second-img {
-        position: absolute;
-        top: 356px;
-        left: 194px;
-        z-index: 2;
+        &--primary  {
+            width: 475px;
+            height: 562px;
+
+            left: 0;
+            z-index: 1;
+
+            @include breakpoint($breakpoint-xs) {
+                width: 261px;
+                height: auto;
+            }
+        }
+
+        &--second {
+            width: 362px;
+            height: 389px;
+
+            top: 356px;
+            left: 194px;
+            z-index: 2;
+
+            @include breakpoint($breakpoint-xs) {
+                width: 202px;
+                height: auto;
+
+                top: 196px;
+                left: 149px;
+            }
+        }
     }
 
     &__content {
         max-width: 525px;
         padding-top: 120px;
         padding-bottom: 120px;
+
+        @include breakpoint($breakpoint-xs) {
+            padding-top: 53px;
+            padding-bottom: 76px;
+        }
 
         p {
             margin-left: 3px;
@@ -93,5 +151,23 @@
 
     &__title {
         margin-bottom: 43px;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 26px;
+
+            &--rays {
+                &:after {
+                    content: url('../images/rays-up.png');
+
+                    bottom: 22px;
+                    left: 279px;
+                    transform: rotate(71deg);
+                }
+            }
+
+            br {
+                display: none;
+            }
+        }
     }
 }

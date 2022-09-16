@@ -1,9 +1,6 @@
 .otherness {
     padding: 2px 0 7px;
-
-    background-image: url('../images/otherness-decorative-line.png');
-    background-repeat: no-repeat;
-    background-position: top 63px center;
+    position: relative;
 
     @include breakpoint($breakpoint-xs) {
         padding-bottom: 0;
@@ -11,8 +8,21 @@
     }
 
     &__section-title {
+        display: inline-block;
         margin-bottom: 60px;
+
         line-height: 1.2;
+
+        &--rays {
+
+            &:after {
+
+                @include breakpoint($breakpoint-xs) {
+                    bottom: -24px;
+                    left: 97%;
+                }
+            }
+        }
 
         @include breakpoint($breakpoint-xs) {
             margin-bottom: 42px;
@@ -71,5 +81,16 @@
         @include breakpoint($breakpoint-xs) {
             display: inline;
         }
+    }
+
+    &__decorative {
+        width: 1440px;
+        height: 236px;
+        stroke: #000;
+
+        position: absolute;
+        top: 64px;
+        left: 0px;
+        z-index: -1;
     }
 }
