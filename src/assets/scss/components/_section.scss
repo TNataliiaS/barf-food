@@ -3,10 +3,10 @@
 
     @include breakpoint($breakpoint-xs) {
         padding-bottom: 80px;
-    }
 
-    &:last-of-type {
-        padding-bottom: 154px;
+        &:last-of-type {
+            padding-bottom: 79px;
+        }
     }
 
     &__title {

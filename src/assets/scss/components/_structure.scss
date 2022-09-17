@@ -16,6 +16,30 @@
 
         &:not(:last-child) {
             margin-right: 24px;
+
+            @include breakpoint($breakpoint-xs) {
+                margin-right: 0;
+            }
+        }
+
+        &--rays {
+            position: relative;
+
+            &:after {
+                content: url('../images/rays-up.png');
+                width: 34px;
+                height: 30px;
+
+                position: absolute;
+                top: -27px;
+                left: -17px;
+
+                @include breakpoint($breakpoint-xs) {
+                    top: -17px;
+                    left: 27px;
+                    transform: rotate(87deg);
+                }
+            }
         }
     }
 
