@@ -29,26 +29,6 @@
         }
     }
 
-    &__item-rays {
-        position: relative;
-
-        &:after {
-            content: url('../images/rays-up.png');
-            width: 34px;
-            height: 30px;
-
-            position: absolute;
-            top: -27px;
-            left: -17px;
-
-            @include breakpoint($breakpoint-xs) {
-                top: -17px;
-                left: 27px;
-                transform: rotate(87deg);
-            }
-        }
-    }
-
     &__item-icon {
         margin-bottom: 9px;
     }

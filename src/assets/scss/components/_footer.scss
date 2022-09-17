@@ -1,6 +1,6 @@
 .footer {
     &__inner {
-        padding-top: 81px;
+        padding-top: 82px;
         padding-bottom: 68px;
 
         color: $primary-color;
@@ -8,13 +8,23 @@
         background-color: $color-сomponents;
         background-image: url(../images/footer-background-left.svg), url(../images/footer-background-right.svg);
         background-repeat: no-repeat;
-        background-position: left 0 bottom -28px, right 0 top 0;
+        background-position: left 0 bottom -28px, right 0 top 1px;
 
         position: relative;
+
+        @include breakpoint($breakpoint-xs) {
+            padding-top: 56px;
+            padding-bottom: 242px;
+            background-image: none;
+        }
     }
 
     &__wrapper {
         display: flex;
+
+        @include breakpoint($breakpoint-xs) {
+            flex-direction: column;
+        }
     }
 
     &__image {
@@ -26,6 +36,11 @@
 
             top: 90px;
             left: 470px;
+
+            @include breakpoint($breakpoint-xs) {
+                top: 181px;
+                left: 262px;
+            }
         }
 
         &--meat {
@@ -34,6 +49,14 @@
 
             top: 221px;
             left: 415px;
+
+            @include breakpoint($breakpoint-xs) {
+                width: 102px;
+                height: 118px;
+
+                top: 403px;
+                left: 266px;
+            }
         }
 
         &--apple {
@@ -42,6 +65,11 @@
 
             bottom: 8px;
             right: 41px;
+
+            @include breakpoint($breakpoint-xs) {
+                bottom: 84px;
+                right: 239px;
+            }
         }
     }
 }

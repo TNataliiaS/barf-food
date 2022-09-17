@@ -3,11 +3,21 @@
 
     &__title {
         grid-column: 1 / span 4;
+
+        @include breakpoint($breakpoint-xs) {
+            grid-column: 1 / -1;
+            margin-bottom: 41px;
+        }
     }
 
     &__wrapper {
         margin-left: 16px;
         grid-column: 5 / -1;
+
+        @include breakpoint($breakpoint-xs) {
+            grid-column: 1 / -1;
+            margin-left: 0;
+        }
     }
 
     &__item {
@@ -32,9 +42,17 @@
             padding-bottom: 28px;
             border-bottom: 1px solid #E5E5E5;
 
+            @include breakpoint($breakpoint-xs) {
+                padding-bottom: 2px;
+            }
+
             .faq__header {
                 padding-bottom: 12px;
                 border: 0;
+
+                @include breakpoint($breakpoint-xs) {
+                    padding-bottom: 16px;
+                }
             }
 
             .faq__btn-vertical-line {
@@ -47,7 +65,13 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 32px 0;
+        padding-top: 32px;
+        padding-bottom: 31px;
+
+        @include breakpoint($breakpoint-xs) {
+            padding-top: 24px;
+            padding-bottom: 23px;
+        }
     }
 
     &__item-title {
@@ -57,6 +81,18 @@
         font-weight: 600;
         font-size: 18px;
         color: $secondary-color;
+
+        > span br {
+            display: none;
+        }
+
+        @include breakpoint($breakpoint-xs) {
+            font-size: 16px;
+
+            > span br {
+                display: block;
+            }
+        }
     }
 
     &__btn {
@@ -70,6 +106,10 @@
         cursor: pointer;
 
         position: relative;
+
+        @include breakpoint($breakpoint-xs) {
+            padding-left: 1px;
+        }
     }
 
     &__btn-horizontal-line,
@@ -95,5 +135,9 @@
     &__content {
         width: 100%;
         max-width: 695px;
+
+        @include breakpoint($breakpoint-xs) {
+            font-size: 14px;
+        }
     }
 }

@@ -1,16 +1,40 @@
 .delivery {
     padding-top: 77px;
 
+    @include breakpoint($breakpoint-xs) {
+        padding-top: 35px;
+        position: relative;
+
+        &:before {
+            content: url('../images/delivery/arrow-mobile.png');
+            width: 683px;
+
+            position: absolute;
+            top: 101px;
+            left: 0;
+        }
+    }
+
     &__item {
         position: relative;
 
-        &:after {
-            content: url('../images/delivery/arrow.png');
-            width: 139px;
+        @include breakpoint($breakpoint-xs) {
+            margin-left: 32px;
+        }
 
-            position: absolute;
-            top: 12px;
-            right: 25px;
+        &:not(:last-child) {
+            &:after {
+                content: url('../images/delivery/arrow.png');
+                width: 139px;
+
+                position: absolute;
+                top: 12px;
+                right: 25px;
+
+                @include breakpoint($breakpoint-xs) {
+                    display: none;
+                }
+            }
         }
     }
 

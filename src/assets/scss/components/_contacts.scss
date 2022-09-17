@@ -3,14 +3,22 @@
     max-width: 305px;
     margin-right: 182px;
 
-    &__title {
-        margin-bottom: 8px;
+    @include breakpoint($breakpoint-xs) {
+        max-width: none;
+        margin-right: 0;
+    }
 
-        font-family: "Oswald", sans-serif;
-        font-weight: 700;
+    &__title {
+        margin-bottom: 7px;
+
+        @extend %font-family-second;
         font-size: 46px;
-        line-height: 1.3;
-        letter-spacing: 0.02em;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 10px;
+
+            font-size: 40px;
+        }
     }
 
     &__description {
@@ -19,9 +27,13 @@
 
     &__phone {
         display: inline-block;
-        margin-bottom: 24px;
+        margin-bottom: 25px;
 
         font-weight: 700;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 23px;
+        }
     }
 
     &__btn {
@@ -40,6 +52,10 @@
 
         &--whatsapp {
             margin-bottom: 17px;
+
+            @include breakpoint($breakpoint-xs) {
+                margin-bottom: 19px;
+            }
 
             &:before {
                 margin-left: 11px;
