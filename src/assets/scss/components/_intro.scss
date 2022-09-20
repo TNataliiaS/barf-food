@@ -17,7 +17,7 @@
     }
 
     @include breakpoint($breakpoint-xs) {
-        margin-bottom: 24px;
+        margin-bottom: 80px;
         height: 746px;
 
         background-image: url('../images/intro-bg-mobile.jpg');

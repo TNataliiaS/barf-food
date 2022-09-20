@@ -17,6 +17,11 @@
         justify-content: space-between;
         margin: 0 auto;
         max-width: 1040px;
+
+        @include breakpoint($breakpoint-sm) {
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
     }
 
     &__item {
@@ -27,8 +32,13 @@
         height: 225px;
         flex-grow: 1;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-xl) {
             height: auto;
+            justify-content: space-between;
+        }
+
+        @include breakpoint($breakpoint-md) {
+            margin: 0 auto;
 
             &:nth-child(1) {
                 display: none;
@@ -36,7 +46,24 @@
         }
 
         &:first-of-type {
+            margin-left: 15px;
             margin-right: 40px;
+        }
+
+        &:last-of-type {
+            margin-right: 15px;
+
+            @include breakpoint($breakpoint-md) {
+                margin: 0 auto;
+            }
+
+            @include breakpoint($breakpoint-sm) {
+                margin: 0 15px;
+            }
+
+            @include breakpoint($breakpoint-xs) {
+                margin: 0 auto;
+            }
         }
     }
 
@@ -55,8 +82,8 @@
         &:first-of-type {
             margin-right: 72px;
 
-            @include breakpoint($breakpoint-xs) {
-                margin-right: 0;
+            @include breakpoint($breakpoint-xl) {
+                margin-right: 24px;
             }
         }
     }
