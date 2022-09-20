@@ -460,7 +460,12 @@ button {
 }
 
 .info-slider__item:first-of-type {
+  margin-left: 15px;
   margin-right: 40px;
+}
+
+.info-slider__item:last-of-type {
+  margin-right: 15px;
 }
 
 .info-slider__title {
@@ -1417,6 +1422,21 @@ button {
   margin-right: 57px;
 }
 
+@media (max-width: 1199px) {
+  .about-product__content {
+    padding-top: 0;
+  }
+
+  .info-slider__item {
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .info-slider__list:first-of-type {
+    margin-right: 24px;
+  }
+}
+
 @media (max-width: 991px) {
   .header__nav {
     height: 100px;
@@ -1457,6 +1477,18 @@ button {
     height: 420px;
     top: 290px;
   }
+
+  .about-product {
+    row-gap: 40px;
+  }
+
+  .about-product__content {
+    grid-column: 1/-1;
+  }
+
+  .about-product__image {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1472,6 +1504,32 @@ button {
   .intro__decorative {
     width: 187px;
     top: 47px;
+  }
+
+  .about-product__title {
+    margin-bottom: 25px;
+  }
+
+  .about-product__text {
+    line-height: 1.5;
+  }
+
+  .about-product__image {
+    display: block;
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+
+  .info-slider__item {
+    margin: 0 auto;
+  }
+
+  .info-slider__item:nth-child(1) {
+    display: none;
+  }
+
+  .info-slider__item:last-of-type {
+    margin: 0 auto;
   }
 }
 
@@ -1512,6 +1570,19 @@ button {
     top: 405px;
     left: calc(100% - 126px);
   }
+
+  .about-product__content {
+    margin-bottom: 40px;
+  }
+
+  .info-slider__wrapper {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .info-slider__item:last-of-type {
+    margin: 0 15px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -1526,7 +1597,7 @@ button {
   }
 
   .intro {
-    margin-bottom: 24px;
+    margin-bottom: 80px;
     height: 746px;
     background-image: url("../images/intro-bg-mobile.jpg");
   }
@@ -1559,40 +1630,14 @@ button {
     row-gap: 0;
   }
 
-  .about-product__content {
-    grid-column: 1/-1;
-    margin-bottom: 40px;
-  }
-
-  .about-product__title {
-    margin-bottom: 25px;
-  }
-
-  .about-product__text {
-    line-height: 1.5;
-  }
-
-  .about-product__image {
-    grid-column: 1/-1;
-    justify-self: center;
-  }
-
   .info-slider {
     background-image: url("../images/info-decorative-line-mobile.png");
     background-position: top left 41px;
     padding: 56px 49px 70px;
   }
 
-  .info-slider__item {
-    height: auto;
-  }
-
-  .info-slider__item:nth-child(1) {
-    display: none;
-  }
-
-  .info-slider__list:first-of-type {
-    margin-right: 0;
+  .info-slider__item:last-of-type {
+    margin: 0 auto;
   }
 
   .info-slider__icon {
