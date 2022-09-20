@@ -5,6 +5,11 @@
     width: 80px;
     height: 80px;
 
+    @include breakpoint($breakpoint-lg) {
+        width: 65px;
+        height: 65px;
+    }
+
     @include breakpoint($breakpoint-xs) {
         width: 60px;
         height: 60px;

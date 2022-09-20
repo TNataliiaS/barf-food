@@ -1,7 +1,7 @@
 .site-nav {
     @extend %flex-align-center;
 
-    @include breakpoint($breakpoint-xs) {
+    @include breakpoint($breakpoint-lg) {
         display: none;
     }
 
