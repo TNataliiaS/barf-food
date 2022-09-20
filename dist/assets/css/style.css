@@ -1417,15 +1417,14 @@ button {
   margin-right: 57px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 991px) {
   .header__nav {
-    height: 70px;
+    height: 100px;
   }
 
   .logo {
-    width: 60px;
-    height: 60px;
-    align-self: flex-end;
+    width: 65px;
+    height: 65px;
   }
 
   .site-nav {
@@ -1438,11 +1437,45 @@ button {
   }
 
   .intro {
-    margin-bottom: 24px;
-    height: 746px;
-    background-image: url("../images/intro-bg-mobile.jpg");
+    margin-bottom: 120px;
   }
 
+  .intro__subtitle {
+    font-size: 50px;
+    line-height: 1.2;
+  }
+
+  .intro__decorative {
+    width: 240px;
+    height: 88px;
+    top: 53px;
+    left: 162px;
+  }
+
+  .intro__zooov {
+    width: 170px;
+    height: 420px;
+    top: 290px;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro__inner {
+    max-width: 370px;
+  }
+
+  .intro__subtitle {
+    font-size: 46px;
+    line-height: 1.3;
+  }
+
+  .intro__decorative {
+    width: 187px;
+    top: 47px;
+  }
+}
+
+@media (max-width: 575px) {
   .intro__title {
     margin-bottom: 47px;
     max-width: 230px;
@@ -1468,7 +1501,6 @@ button {
   }
 
   .intro__decorative {
-    width: 187px;
     height: 98px;
     top: 73px;
     left: -6px;
@@ -1479,6 +1511,24 @@ button {
     height: 334px;
     top: 405px;
     left: calc(100% - 126px);
+  }
+}
+
+@media (max-width: 375px) {
+  .header__nav {
+    height: 70px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+  }
+
+  .intro {
+    margin-bottom: 24px;
+    height: 746px;
+    background-image: url("../images/intro-bg-mobile.jpg");
   }
 
   .btn--transparent {

@@ -13,6 +13,10 @@
         align-items: center;
         height: 112px;
 
+        @include breakpoint($breakpoint-lg) {
+            height: 100px;
+        }
+
         @include breakpoint($breakpoint-xs) {
             height: 70px;
         }
