@@ -2,14 +2,14 @@
 
     &__header {
         padding-top: 23px;
-        padding-bottom: 41px;
+        margin-bottom: 41px;
         @extend %grid-columns;
 
         position: relative;
 
         @include breakpoint($breakpoint-xs) {
             padding-top: 18px;
-            padding-bottom: 0;
+            margin-bottom: 0;
             margin-bottom: 32px;
         }
     }
@@ -18,7 +18,7 @@
         margin-bottom: 16px;
         grid-column: 1 / span 4;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-xl) {
             grid-column: 1 / -1;
             grid-row: auto;
             margin-bottom: 19px;
@@ -36,6 +36,11 @@
 
         transform: rotate(-13deg);
 
+        @include breakpoint($breakpoint-xl) {
+            width: 168px;
+            height: 70px;
+        }
+
         @include breakpoint($breakpoint-xs) {
             height: 63px;
             top: 14px;
@@ -47,12 +52,22 @@
         padding-left: 11px;
         grid-column: 5 / -1;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-xl) {
+            br {
+                display: none;
+            }
+
             margin: 0;
             grid-column: 1 / -1;
             grid-row: auto;
 
             padding-left: 0;
+        }
+
+        @include breakpoint($breakpoint-xs) {
+            br {
+                display: block;
+            }
         }
     }
 
@@ -65,10 +80,10 @@
     }
 
     &__item {
+        width: 280px;
 
         @include breakpoint($breakpoint-xs) {
             grid-column: 1 / -1;
-            width: 280px;
         }
 
         &:first-child {

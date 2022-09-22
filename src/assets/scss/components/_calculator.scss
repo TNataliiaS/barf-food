@@ -1,4 +1,5 @@
 .calculator {
+    width: 280px;
     padding: 35px 25px 25px;
     grid-column: 10 / -1;
 
@@ -7,8 +8,14 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    @include breakpoint($breakpoint-xl) {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+
     @include breakpoint($breakpoint-xs) {
         display: none;
+        width: 100%;
     }
 
     &--mobile {
