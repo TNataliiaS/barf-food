@@ -1,9 +1,15 @@
 .section {
     padding-bottom: 160px;
 
-    @include breakpoint($breakpoint-xs) {
-        padding-bottom: 80px;
+    @include breakpoint($breakpoint-lg) {
+        padding-bottom: 120px;
+    }
 
+    @include breakpoint($breakpoint-sm) {
+        padding-bottom: 80px;
+    }
+
+    @include breakpoint($breakpoint-xs) {
         &:last-of-type {
             padding-bottom: 79px;
         }
@@ -13,6 +19,10 @@
         @extend %font-family-second;
         font-size: 46px;
         color: $secondary-color;
+
+        @include breakpoint($breakpoint-xl) {
+            font-size: 44px;
+        }
 
         @include breakpoint($breakpoint-xs) {
             font-size: 40px;

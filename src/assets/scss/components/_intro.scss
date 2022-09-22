@@ -16,10 +16,12 @@
         margin-bottom: 120px;
     }
 
-    @include breakpoint($breakpoint-xs) {
+    @include breakpoint($breakpoint-sm) {
         margin-bottom: 80px;
-        height: 746px;
+    }
 
+    @include breakpoint($breakpoint-xs) {
+        height: 746px;
         background-image: url('../images/intro-bg-mobile.jpg');
     }
 
