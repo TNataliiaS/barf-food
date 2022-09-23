@@ -1567,6 +1567,17 @@ button {
     padding-top: 53px;
     padding-bottom: 76px;
   }
+
+  .faq__title {
+    grid-column: 1/-1;
+    margin-bottom: 41px;
+  }
+
+  .faq__wrapper {
+    grid-column: 1/-1;
+    margin-left: 0;
+    margin-bottom: -1px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -2156,17 +2167,6 @@ button {
 
   .delivery__item-icon {
     margin-bottom: 10px;
-  }
-
-  .faq__title {
-    grid-column: 1/-1;
-    margin-bottom: 41px;
-  }
-
-  .faq__wrapper {
-    grid-column: 1/-1;
-    margin-left: 0;
-    margin-bottom: -1px;
   }
 
   .faq__item--active {
