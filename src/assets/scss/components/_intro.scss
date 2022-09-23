@@ -101,11 +101,15 @@
     }
 
     &__decorative {
-        height: 98px;
+        width: 270px;
+        height: 97px;
+
+        stroke: #EC7973;
+        fill: transparent;
 
         position: absolute;
-        top: 63px;
-        left: 156px;
+        top: 64px;
+        left: 171px;
         z-index: -1;
 
         transform: rotate(5deg);
@@ -139,6 +143,8 @@
     &__zooov {
         width: 168px;
         height: 548px;
+
+        fill: $primary-color;
 
         position: absolute;
         top: 160px;

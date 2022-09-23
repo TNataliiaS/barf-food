@@ -6,19 +6,36 @@
         flex-basis: calc((100% - 24px * 3) / 4);
         color: $secondary-color;
 
-        @include breakpoint($breakpoint-xs) {
-            flex-basis: auto;
-
-            &:not(:last-child) {
-                margin-bottom: 40px;
-            }
-        }
-
         &:not(:last-child) {
             margin-right: 24px;
 
-            @include breakpoint($breakpoint-xs) {
+            @include breakpoint($breakpoint-lg) {
                 margin-right: 0;
+            }
+        }
+
+        @include breakpoint($breakpoint-lg) {
+            flex-basis: calc((100% - 24px) / 2);
+
+            &:nth-child(odd) {
+                margin-right: 24px;
+            }
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-bottom: 70px;
+            }
+        }
+
+        @include breakpoint($breakpoint-sm) {
+            flex-basis: auto;
+
+            &:nth-child(odd) {
+                margin-right: 0;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 40px;
             }
         }
 
@@ -34,7 +51,7 @@
                 top: -27px;
                 left: -17px;
 
-                @include breakpoint($breakpoint-xs) {
+                @include breakpoint($breakpoint-sm) {
                     top: -17px;
                     left: 27px;
                     transform: rotate(87deg);
