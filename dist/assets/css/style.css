@@ -980,7 +980,6 @@ button {
 .about-us {
   overflow: hidden;
   background-color: #FFF4F3;
-  position: relative;
 }
 
 .about-us__decorative {
@@ -989,17 +988,18 @@ button {
   stroke: #EAD1D0;
   fill: transparent;
   position: absolute;
+  z-index: 0;
 }
 
 .about-us__decorative--primary {
-  bottom: 300px;
-  left: -351px;
+  top: 289px;
+  left: -471px;
   transform: rotate(-65deg);
 }
 
 .about-us__decorative--second {
-  bottom: 295px;
-  left: -356px;
+  top: 295px;
+  left: -476px;
   transform: rotate(-53deg);
 }
 
@@ -1014,8 +1014,7 @@ button {
 
 .about-us__pictures {
   margin-right: 24px;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding: 80px 0;
 }
 
 .about-us__pictures-wrapper {
@@ -1046,13 +1045,10 @@ button {
   z-index: 3;
 }
 
-.about-us__img {
-  position: absolute;
-}
-
 .about-us__img--primary {
   width: 475px;
   height: 562px;
+  position: relative;
   left: 0;
   z-index: 1;
 }
@@ -1060,6 +1056,7 @@ button {
 .about-us__img--second {
   width: 362px;
   height: 389px;
+  position: absolute;
   top: 356px;
   left: 194px;
   z-index: 2;
@@ -1068,7 +1065,7 @@ button {
 .about-us__content {
   max-width: 525px;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 118px;
 }
 
 .about-us__content p {
@@ -1102,11 +1099,11 @@ button {
 }
 
 .delivery__item-icon {
-  margin-bottom: 11px;
+  margin-bottom: 12px;
 }
 
 .delivery__title {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .delivery__description span {
@@ -1118,6 +1115,7 @@ button {
 }
 
 .faq__wrapper {
+  margin-bottom: 1px;
   margin-left: 16px;
   grid-column: 5/-1;
 }
@@ -1538,6 +1536,37 @@ button {
   .norms__table:first-child {
     margin-right: 24px;
   }
+
+  .about-us__decorative {
+    display: none;
+  }
+
+  .about-us__wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .about-us__pictures {
+    display: none;
+    padding: 0;
+  }
+
+  .about-us__pictures-wrapper:before {
+    display: none;
+  }
+
+  .about-us__pictures-wrapper:after {
+    display: none;
+  }
+
+  .about-us__img--second {
+    display: none;
+  }
+
+  .about-us__content {
+    max-width: none;
+    padding-top: 53px;
+    padding-bottom: 76px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1841,6 +1870,10 @@ button {
     flex-basis: auto;
   }
 
+  .structure__item:nth-child(odd) {
+    margin-right: 0;
+  }
+
   .structure__item:not(:last-child) {
     margin-bottom: 40px;
   }
@@ -2033,16 +2066,31 @@ button {
     display: none;
   }
 
-  .about-us__wrapper {
-    flex-direction: column-reverse;
+  .about-us__decorative {
+    display: block;
+    width: 792px;
+    height: 130px;
+  }
+
+  .about-us__decorative--primary {
+    top: 164px;
+    left: -219px;
+    transform: rotate(-58deg);
+  }
+
+  .about-us__decorative--second {
+    top: 164px;
+    left: -220px;
+    transform: rotate(-46deg);
   }
 
   .about-us__pictures {
-    padding-top: 0;
-    padding-bottom: 454px;
+    display: block;
+    padding-bottom: 146px;
   }
 
   .about-us__pictures-wrapper:before {
+    display: block;
     width: 101px;
     height: 101px;
     top: 261px;
@@ -2050,6 +2098,7 @@ button {
   }
 
   .about-us__pictures-wrapper:after {
+    display: block;
     width: 66px;
     height: 66px;
     top: 158px;
@@ -2062,15 +2111,11 @@ button {
   }
 
   .about-us__img--second {
+    display: block;
     width: 202px;
     height: auto;
     top: 196px;
     left: 149px;
-  }
-
-  .about-us__content {
-    padding-top: 53px;
-    padding-bottom: 76px;
   }
 
   .about-us__title {
@@ -2109,6 +2154,10 @@ button {
     display: none;
   }
 
+  .delivery__item-icon {
+    margin-bottom: 10px;
+  }
+
   .faq__title {
     grid-column: 1/-1;
     margin-bottom: 41px;
@@ -2117,6 +2166,7 @@ button {
   .faq__wrapper {
     grid-column: 1/-1;
     margin-left: 0;
+    margin-bottom: -1px;
   }
 
   .faq__item--active {

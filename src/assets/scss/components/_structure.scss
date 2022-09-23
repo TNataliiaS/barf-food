@@ -30,6 +30,10 @@
         @include breakpoint($breakpoint-sm) {
             flex-basis: auto;
 
+            &:nth-child(odd) {
+                margin-right: 0;
+            }
+
             &:not(:last-child) {
                 margin-bottom: 40px;
             }

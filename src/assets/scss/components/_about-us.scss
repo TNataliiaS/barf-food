@@ -1,8 +1,6 @@
 .about-us {
     overflow: hidden;
-
     background-color: $section-accent-color;
-    position: relative;
 
     &__decorative {
         width: 1440px;
@@ -12,24 +10,47 @@
         fill: transparent;
 
         position: absolute;
+        z-index: 0;
+
+        @include breakpoint($breakpoint-xl) {
+            display: none;
+        }
+
+        @include breakpoint($breakpoint-xs) {
+            display: block;
+            width: 792px;
+            height: 130px;
+        }
 
         &--primary {
-            bottom: 300px;
-            left: -351px;
+            top: 289px;
+            left: -471px;
             transform: rotate(-65deg);
+
+            @include breakpoint($breakpoint-xs) {
+                top: 164px;
+                left: -219px;
+                transform: rotate(-58deg);
+            }
         }
 
         &--second {
-            bottom: 295px;
-            left: -356px;
+            top: 295px;
+            left: -476px;
             transform: rotate(-53deg);
+
+            @include breakpoint($breakpoint-xs) {
+                top: 164px;
+                left: -220px;
+                transform: rotate(-46deg);
+            }
         }
     }
 
     &__wrapper {
         display: flex;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-xl) {
             flex-direction: column-reverse;
         }
     }
@@ -37,17 +58,20 @@
     &__pictures,
     &__content {
         flex-basis: calc((100% - 24px) / 2);
-
     }
 
     &__pictures {
         margin-right: 24px;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding: 80px 0;
+
+        @include breakpoint($breakpoint-xl) {
+            display: none;
+            padding: 0;
+        }
 
         @include breakpoint($breakpoint-xs) {
-            padding-top: 0;
-            padding-bottom: 454px;
+            display: block;
+            padding-bottom: 146px;
         }
     }
 
@@ -66,7 +90,12 @@
             left: -55px;
             z-index: 2;
 
+            @include breakpoint($breakpoint-xl) {
+                display: none;
+            }
+
             @include breakpoint($breakpoint-xs) {
+                display: block;
                 width: 101px;
                 height: 101px;
 
@@ -87,7 +116,12 @@
             left: 415px;
             z-index: 3;
 
+            @include breakpoint($breakpoint-xl) {
+                display: none;
+            }
+
             @include breakpoint($breakpoint-xs) {
+                display: block;
                 width: 66px;
                 height: 66px;
 
@@ -98,12 +132,11 @@
     }
 
     &__img {
-        position: absolute;
-
         &--primary  {
             width: 475px;
             height: 562px;
 
+            position: relative;
             left: 0;
             z-index: 1;
 
@@ -117,11 +150,17 @@
             width: 362px;
             height: 389px;
 
+            position: absolute;
             top: 356px;
             left: 194px;
             z-index: 2;
 
+            @include breakpoint($breakpoint-xl) {
+                display: none;
+            }
+
             @include breakpoint($breakpoint-xs) {
+                display: block;
                 width: 202px;
                 height: auto;
 
@@ -134,9 +173,10 @@
     &__content {
         max-width: 525px;
         padding-top: 120px;
-        padding-bottom: 120px;
+        padding-bottom: 118px;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-xl) {
+            max-width: none;
             padding-top: 53px;
             padding-bottom: 76px;
         }

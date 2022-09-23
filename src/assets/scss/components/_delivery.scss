@@ -39,11 +39,15 @@
     }
 
     &__item-icon {
-        margin-bottom: 11px;
+        margin-bottom: 12px;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 10px;
+        }
     }
 
     &__title {
-        margin-bottom: 5px;
+        margin-bottom: 6px;
     }
 
     &__description {
