@@ -460,12 +460,7 @@ button {
 }
 
 .info-slider__item:first-of-type {
-  margin-left: 15px;
   margin-right: 40px;
-}
-
-.info-slider__item:last-of-type {
-  margin-right: 15px;
 }
 
 .info-slider__title {
@@ -787,6 +782,7 @@ button {
 .norms__wrapper {
   display: flex;
   margin-bottom: 37px;
+  justify-content: space-between;
 }
 
 .norms__item {
@@ -795,7 +791,11 @@ button {
 }
 
 .norms__item:first-of-type {
-  margin-right: 110px;
+  margin-right: 47px;
+}
+
+.norms__item:last-of-type {
+  margin-right: 30px;
 }
 
 .norms__item-title {
@@ -853,6 +853,7 @@ button {
   padding: 0 5px 9px 0;
   font-size: 14px;
   font-weight: 400;
+  text-align: left;
 }
 
 .norms__table-heading:first-child {
@@ -1445,6 +1446,14 @@ button {
     justify-content: space-between;
   }
 
+  .info-slider__item:first-of-type {
+    margin-left: 20px;
+  }
+
+  .info-slider__item:last-of-type {
+    margin-right: 20px;
+  }
+
   .info-slider__list:first-of-type {
     margin-right: 24px;
   }
@@ -1504,6 +1513,14 @@ button {
 
   .rations__description br {
     display: none;
+  }
+
+  .norms__item:last-of-type {
+    margin-right: 0;
+  }
+
+  .norms__table:first-child {
+    margin-right: 24px;
   }
 }
 
@@ -1576,6 +1593,28 @@ button {
   .sets__description {
     grid-column: 1/-1;
   }
+
+  .norms__wrapper {
+    margin-bottom: 23px;
+  }
+
+  .norms__item {
+    max-width: 400px;
+  }
+
+  .norms__inner {
+    display: none;
+  }
+
+  .norms__table--tabs {
+    display: table;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .norms__info {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1617,6 +1656,15 @@ button {
 
   .info-slider__item:last-of-type {
     margin: 0 auto;
+  }
+
+  .norms__item-title {
+    margin-bottom: 6px;
+    font-size: 20px;
+  }
+
+  .norms__age {
+    font-size: 14px;
   }
 }
 
@@ -1677,6 +1725,79 @@ button {
 
   .info-slider__item:last-of-type {
     margin: 0 15px;
+  }
+
+  .norms {
+    padding-top: 44px;
+    padding-bottom: 25px;
+  }
+
+  .norms__title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.3;
+    color: #000;
+    text-transform: none;
+  }
+
+  .norms__title:after {
+    top: 62px;
+  }
+
+  .norms__wrapper {
+    flex-direction: column;
+  }
+
+  .norms__item {
+    max-width: none;
+  }
+
+  .norms__item:last-of-type {
+    display: none;
+  }
+
+  .norms__item-title {
+    display: none;
+  }
+
+  .norms__item-title--tabs {
+    display: block;
+  }
+
+  .norms__age {
+    display: none;
+  }
+
+  .norms__table-row {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .norms__table-heading {
+    width: 50%;
+    padding-bottom: 8px;
+    padding-top: 4px;
+    text-align: center;
+  }
+
+  .norms__table-heading:last-child {
+    padding-left: 0;
+  }
+
+  .norms__table-data {
+    width: 50%;
+    padding-top: 7px;
+    padding-bottom: 9px;
+  }
+
+  .norms__table-data:first-child {
+    padding-left: 0;
+  }
+
+  .norms__table-data:last-child {
+    padding-right: 20px;
   }
 }
 
@@ -1816,96 +1937,16 @@ button {
     display: none;
   }
 
-  .norms {
-    padding-top: 44px;
-    padding-bottom: 25px;
-  }
-
   .norms__header {
     padding-bottom: 0;
   }
 
   .norms__title {
     margin-bottom: 30px;
-    font-family: "Oswald", sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 1.3;
-    color: #000;
-    text-transform: none;
   }
 
   .norms__title:after {
     display: none;
-  }
-
-  .norms__wrapper {
-    margin-bottom: 23px;
-    flex-direction: column;
-  }
-
-  .norms__item:last-of-type {
-    display: none;
-  }
-
-  .norms__item:first-of-type {
-    margin-right: 0;
-  }
-
-  .norms__item-title {
-    display: none;
-  }
-
-  .norms__item-title--tabs {
-    display: block;
-  }
-
-  .norms__age {
-    display: none;
-  }
-
-  .norms__inner {
-    display: none;
-  }
-
-  .norms__table--tabs {
-    display: table;
-    width: 100%;
-    margin-bottom: 16px;
-  }
-
-  .norms__table-row {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-  }
-
-  .norms__table-heading {
-    width: 50%;
-    padding-bottom: 8px;
-    padding-top: 4px;
-  }
-
-  .norms__table-heading:last-child {
-    padding-left: 0;
-  }
-
-  .norms__table-data {
-    width: 50%;
-    padding-top: 7px;
-    padding-bottom: 9px;
-  }
-
-  .norms__table-data:first-child {
-    padding-left: 0;
-  }
-
-  .norms__table-data:last-child {
-    padding-right: 20px;
-  }
-
-  .norms__info {
-    font-size: 14px;
   }
 
   .structure__item {
