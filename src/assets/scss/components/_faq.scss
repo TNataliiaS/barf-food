@@ -4,7 +4,7 @@
     &__title {
         grid-column: 1 / span 4;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-xl) {
             grid-column: 1 / -1;
             margin-bottom: 41px;
         }
@@ -15,7 +15,7 @@
         margin-left: 16px;
         grid-column: 5 / -1;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-xl) {
             grid-column: 1 / -1;
             margin-left: 0;
             margin-bottom: -1px;
