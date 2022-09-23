@@ -2,7 +2,7 @@
     padding: 60px 0 31px;
     background-color: $section-accent-color;
 
-    @include breakpoint($breakpoint-xs) {
+    @include breakpoint($breakpoint-sm) {
         padding-top: 44px;
         padding-bottom: 25px;
     }
@@ -23,9 +23,7 @@
         text-transform: uppercase;
         color: $color-сomponents;
 
-        @include breakpoint($breakpoint-xs) {
-            margin-bottom: 30px;
-
+        @include breakpoint($breakpoint-sm) {
             font-family: "Oswald", sans-serif;
             font-weight: 700;
             font-size: 32px;
@@ -34,12 +32,20 @@
             text-transform: none;
         }
 
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 30px;
+        }
+
         &:after {
             content: url('../images/norms-decoration.png');
 
             position: absolute;
             top: 25px;
             left: 0;
+
+            @include breakpoint($breakpoint-sm) {
+                top: 62px;
+            }
 
             @include breakpoint($breakpoint-xs) {
                 display: none;
@@ -50,9 +56,13 @@
     &__wrapper {
         display: flex;
         margin-bottom: 37px;
+        justify-content: space-between;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-lg) {
             margin-bottom: 23px;
+        }
+
+        @include breakpoint($breakpoint-sm) {
             flex-direction: column;
         }
     }
@@ -61,16 +71,26 @@
         width: 100%;
         max-width: 530px;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-lg) {
+            max-width: 400px;
+        }
+
+        @include breakpoint($breakpoint-sm) {
+            max-width: none;
+
             &:last-of-type {
                 display: none;
             }
         }
 
         &:first-of-type {
-            margin-right: 110px;
+            margin-right: 47px;
+        }
 
-            @include breakpoint($breakpoint-xs) {
+        &:last-of-type {
+            margin-right: 30px;
+
+            @include breakpoint($breakpoint-xl) {
                 margin-right: 0;
             }
         }
@@ -84,7 +104,12 @@
         text-transform: uppercase;
         color: $secondary-color;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-md) {
+            margin-bottom: 6px;
+            font-size: 20px;
+        }
+
+        @include breakpoint($breakpoint-sm) {
             display: none;
         }
 
@@ -97,7 +122,7 @@
             font-size: 16px;
             letter-spacing: 0.02em;
 
-            @include breakpoint($breakpoint-xs) {
+            @include breakpoint($breakpoint-sm) {
                 display: block;
             }
         }
@@ -110,7 +135,11 @@
         letter-spacing: 0.02em;
         color: $secondary-color;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-md) {
+            font-size: 14px;
+        }
+
+        @include breakpoint($breakpoint-sm) {
             display: none;
         }
     }
@@ -119,7 +148,7 @@
         display: flex;
         margin-bottom: 24px;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-lg) {
             display: none;
         }
     }
@@ -128,12 +157,16 @@
 
         &:first-child {
             margin-right: 61px;
+
+            @include breakpoint($breakpoint-xl) {
+                margin-right: 24px;
+            }
         }
 
         &--tabs {
             display: none;
 
-            @include breakpoint($breakpoint-xs) {
+            @include breakpoint($breakpoint-lg) {
                 display: table;
                 width: 100%;
                 margin-bottom: 16px;
@@ -144,7 +177,7 @@
     &__table-row {
         position: relative;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-sm) {
             display: flex;
             justify-content: space-between;
             text-align: center;
@@ -169,11 +202,14 @@
 
         font-size: 14px;
         font-weight: 400;
+        text-align: left;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-sm) {
             width: 50%;
             padding-bottom: 8px;
             padding-top: 4px;
+
+            text-align: center;
         }
 
         &:first-child {
@@ -183,7 +219,7 @@
         &:last-child {
             padding-left: 9px;
 
-            @include breakpoint($breakpoint-xs) {
+            @include breakpoint($breakpoint-sm) {
                 padding-left: 0;
             }
         }
@@ -195,7 +231,7 @@
 
         font-weight: 500;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-sm) {
             width: 50%;
             padding-top: 7px;
             padding-bottom: 9px;
@@ -204,7 +240,7 @@
         &:first-child {
             padding-left: 6px;
 
-            @include breakpoint($breakpoint-xs) {
+            @include breakpoint($breakpoint-sm) {
                 padding-left: 0;
             }
         }
@@ -212,7 +248,7 @@
         &:last-child {
             padding-left: 9px;
 
-            @include breakpoint($breakpoint-xs) {
+            @include breakpoint($breakpoint-sm) {
                 padding-right: 20px;
             }
         }
@@ -223,7 +259,7 @@
             font-weight: 700;
         }
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-lg) {
             font-size: 14px;
         }
     }
