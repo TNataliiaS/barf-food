@@ -173,8 +173,25 @@ function svgsprite() {
         }))
         .pipe(newer(path.build.svgsprite))
         .pipe(svgSprite({
+            shape: {
+                transform: [{
+                    "svgo": {
+                        "plugins": [
+                            { removeViewBox: false },
+                            { removeUnusedNS: false },
+                            { removeUselessStrokeAndFill: true },
+                            { cleanupIDs: false },
+                            { removeComments: true },
+                            { removeEmptyAttrs: true },
+                            { removeEmptyText: true },
+                            { collapseGroups: true },
+                            { removeAttrs: { attrs: '(fill|stroke|style)' } }
+                        ]
+                    }
+                }]
+            },
             mode: {
-                stack: {
+                symbol: {
                     sprite: "../sprite/sprite.svg"
                 }
             },

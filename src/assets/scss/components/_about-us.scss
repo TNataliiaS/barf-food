@@ -8,6 +8,9 @@
         width: 1440px;
         height: 236px;
 
+        stroke: $element-color;
+        fill: transparent;
+
         position: absolute;
 
         &--primary {

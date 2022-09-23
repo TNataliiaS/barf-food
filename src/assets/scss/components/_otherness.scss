@@ -2,7 +2,7 @@
     padding: 2px 0 7px;
     position: relative;
 
-    @include breakpoint($breakpoint-xs) {
+    @include breakpoint($breakpoint-sm) {
         padding-bottom: 0;
         margin-bottom: -3px;
     }
@@ -16,15 +16,14 @@
         &--rays {
 
             &:after {
-
-                @include breakpoint($breakpoint-xs) {
+                @include breakpoint($breakpoint-sm) {
                     bottom: -24px;
                     left: 97%;
                 }
             }
         }
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-sm) {
             margin-bottom: 42px;
         }
     }
@@ -42,7 +41,7 @@
     }
 
     &__description {
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-lg) {
             br {
                 display: none;
             }
@@ -50,7 +49,7 @@
     }
 
     &__text-desktop {
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-sm) {
             display: none;
         }
     }
@@ -58,7 +57,7 @@
     &__text-mobile {
         display: none;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-sm) {
             display: inline;
         }
     }
@@ -66,11 +65,30 @@
     &__decorative {
         width: 1440px;
         height: 236px;
-        stroke: #000;
+        stroke: $section-accent-color;
+        fill: transparent;
 
         position: absolute;
-        top: 64px;
-        left: 0px;
+        top: 65px;
+        left: 50%;
         z-index: -1;
+
+        transform: translateX(-50%);
+
+        @include breakpoint($breakpoint-sm) {
+            left: -10px;
+            transform: translateX(0);
+
+            &--mobile {
+                display: block;
+
+                top: 432px;
+                left: -448px;
+            }
+        }
+
+        &--mobile {
+            display: none;
+        }
     }
 }
