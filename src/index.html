@@ -850,20 +850,25 @@
                         <a class="contacts__btn contacts__btn--telegram btn btn--transparent" href="#">Написать в Telegram</a>
                         <p>Подписывайтесь на наш <a class="contacts__subscribe-instagram" href="#">Instagram</a> и&nbspследите за новостями</p>
                     </div>
+
                     <div class="question-form">
                         <div class="question-form__header">
                             <h3 class="question-form__title">Остались вопросы?</h3>
                             <p>Напишите нам и мы обязательно подробно на них ответим.</p>
                         </div>
                         <form action="/" class="feedback-form">
-                            <label class="visually-hidden" for="form-name">Имя</label>
-                            <input class="feedback-form__input" id="form-name" type="text" name="name" placeholder="Имя">
+                            <div class="feedback-form__group">
+                                <input class="feedback-form__input" id="form-name" type="text" name="name" placeholder=" " required>
+                                <label class="feedback-form__label" for="form-name">Имя</label>
+                            </div>
 
-                            <label class="visually-hidden" for="form-email">Email</label>
-                            <input class="feedback-form__input" id="form-email" type="email" name="email" placeholder="E-mail">
+                            <div class="feedback-form__group">
+                                <input class="feedback-form__input" id="form-email" type="email" name="email" placeholder=" " required>
+                                <label class="feedback-form__label" for="form-email">Email</label>
+                            </div>
 
                             <label class="visually-hidden" for="form-textarea">Комментарий</label>
-                            <textarea class="feedback-form__textarea" id="form-textarea" name="text" placeholder="Ваш вопрос..."></textarea>
+                            <textarea class="feedback-form__textarea" id="form-textarea" name="text" placeholder="Ваш вопрос..." required></textarea>
 
                             <div class="feedback-form__checkbox-block">
                                 <input class="feedback-form__checkbox" type="checkbox" id="agree" name="agree" value="agree" checked>
@@ -876,8 +881,28 @@
                         </form>
                     </div><!-- /.question-form -->
                 </div><!-- /.footer__wrapper -->
+
+                <svg class="footer__image footer__image--decorative-line-one">
+                    <use href="./assets/images/sprite/sprite.svg#decorative-line-block"></use>
+                </svg>
+
+                <svg class="footer__image footer__image--decorative-line-one-rays">
+                    <use href="./assets/images/sprite/sprite.svg#rays"></use>
+                </svg>
+
+                <svg class="footer__image footer__image--decorative-line-two">
+                    <use href="./assets/images/sprite/sprite.svg#decorative-line-block"></use>
+                </svg>
+
+                <svg class="footer__image footer__image--decorative-line-two-rays">
+                    <use href="./assets/images/sprite/sprite.svg#rays"></use>
+                </svg>
+
                 <img class="footer__image footer__image--dog" src="./assets/images/happy-dog-footer.png" alt="">
                 <img class="footer__image footer__image--meat" src="./assets/images/meat-footer.png" alt="">
+                <svg class="footer__image footer__image--meat-rays">
+                    <use href="./assets/images/sprite/sprite.svg#rays"></use>
+                </svg>
                 <img class="footer__image footer__image--apple" src="./assets/images/apple-footer.png" alt="">
             </div><!-- /.container -->
         </div><!-- /.footer__inner -->

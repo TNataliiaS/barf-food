@@ -1,14 +1,12 @@
 .footer {
     &__inner {
-        padding-top: 82px;
+        padding-top: 81px;
         padding-bottom: 68px;
+        overflow: hidden;
 
         color: $primary-color;
 
         background-color: $color-сomponents;
-        background-image: url(../images/footer-background-left.svg), url(../images/footer-background-right.svg);
-        background-repeat: no-repeat;
-        background-position: left 0 bottom -28px, right 0 top 1px;
 
         position: relative;
 
@@ -22,13 +20,128 @@
     &__wrapper {
         display: flex;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-xxl) {
+            justify-content: space-between;
+        }
+
+        @include breakpoint($breakpoint-md) {
             flex-direction: column;
         }
     }
 
     &__image {
+        display: block;
         position: absolute;
+
+        &--decorative-line-one,
+        &--decorative-line-two {
+            width: 296px;
+            height: 290px;
+
+            fill: $primary-color;
+            z-index: 1;
+        }
+
+        &--decorative-line-one {
+            left: -173px;
+            bottom: 67px;
+
+           transform: rotate(-150deg);
+
+           @include breakpoint($breakpoint-xxl) {
+                display: none;
+            }
+
+            @include breakpoint($breakpoint-xs) {
+                display: block;
+
+                left: 160px;
+                bottom: -56px;
+
+                transform: rotate(-270deg);
+            }
+        }
+
+        &--decorative-line-one-rays {
+            width: 47px;
+            height: 61px;
+
+            fill: $primary-color;
+
+            top: 158px;
+            left: 34px;
+
+            transform: rotate(88deg);
+
+            @include breakpoint($breakpoint-xxl) {
+                display: none;
+            }
+
+            @include breakpoint($breakpoint-xs) {
+                display: block;
+
+                top: auto;
+                bottom: 66px;
+                left: 131px;
+
+                transform: rotate(-32deg);
+            }
+        }
+
+        &--decorative-line-two {
+            top: 0px;
+            right: -30px;
+
+            @include breakpoint($breakpoint-xxl) {
+                display: none;
+            }
+
+            @include breakpoint($breakpoint-md) {
+                display: block;
+
+                top: -45px;
+                right: -75px;
+            }
+
+            @include breakpoint($breakpoint-sm) {
+                width: 150px;
+                height: 180px;
+
+                top: -88px;
+                right: -40px;
+            }
+        }
+
+        &--decorative-line-two-rays {
+            width: 49px;
+            height: 63px;
+
+            fill: $primary-color;
+
+            top: 267px;
+            right: 100px;
+
+            transform: rotate(-123deg);
+
+            @include breakpoint($breakpoint-xxl) {
+                display: none;
+            }
+
+            @include breakpoint($breakpoint-md) {
+                display: block;
+
+                top: 210px;
+                right: 70px;
+            }
+
+            @include breakpoint($breakpoint-sm) {
+                width: 32px;
+                height: 42px;
+
+                top: 78px;
+                right: 23px;
+            }
+        }
 
         &--dog {
             width: 110px;
@@ -37,6 +150,19 @@
             top: 90px;
             left: 470px;
 
+            @include breakpoint($breakpoint-xxl) {
+                left: 390px;
+            }
+
+            @include breakpoint($breakpoint-xl) {
+                left: 325px;
+            }
+
+            @include breakpoint($breakpoint-md) {
+                top: 195px;
+                left: 310px;
+            }
+
             @include breakpoint($breakpoint-xs) {
                 top: 181px;
                 left: 262px;
@@ -44,18 +170,58 @@
         }
 
         &--meat {
-            width: 174px;
-            height: 192px;
+            width: 175px;
+            height: 174px;
 
-            top: 221px;
-            left: 415px;
+            top: 240px;
+            left: 414px;
 
-            @include breakpoint($breakpoint-xs) {
-                width: 102px;
-                height: 118px;
+            @include breakpoint($breakpoint-xxl) {
+                left: 340px;
+            }
 
-                top: 403px;
-                left: 266px;
+            @include breakpoint($breakpoint-xl) {
+                left: 275px;
+            }
+
+            @include breakpoint($breakpoint-md) {
+                top: 340px;
+                left: 340px;
+            }
+
+            @include breakpoint($breakpoint-sm) {
+                width: 105px;
+                height: 104px;
+
+                top: 415px;
+                left: 264px;
+            }
+        }
+
+        &--meat-rays {
+            width: 49px;
+            height: 63px;
+
+            fill: $primary-color;
+
+            top: 209px;
+            left: 436px;
+
+            @include breakpoint($breakpoint-xxl) {
+                left: 356px;
+            }
+
+            @include breakpoint($breakpoint-xl) {
+                left: 290px;
+            }
+
+            @include breakpoint($breakpoint-md) {
+                top: 320px;
+                left: 355px;
+            }
+
+            @include breakpoint($breakpoint-sm) {
+                display: none;
             }
         }
 
@@ -66,7 +232,16 @@
             bottom: 8px;
             right: 41px;
 
+            @include breakpoint($breakpoint-xxl) {
+                right: 375px;
+            }
+
+            @include breakpoint($breakpoint-xxl) {
+                display: none;
+            }
+
             @include breakpoint($breakpoint-xs) {
+                display: block;
                 bottom: 84px;
                 right: 239px;
             }
