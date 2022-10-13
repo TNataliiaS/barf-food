@@ -37,6 +37,17 @@
                 position: absolute;
                 bottom: -26px;
                 left: 100%;
+
+                animation: scale 1s linear infinite alternate;
+
+                @keyframes scale {
+                    from {
+                        transform: translateX(0) translateY(0) scale(1);
+                    }
+                    to {
+                        transform: translateX(2px) translateY(2px) scale(1.2);
+                    }
+                }
             }
         }
     }

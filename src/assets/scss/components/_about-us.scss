@@ -10,7 +10,6 @@
         fill: transparent;
 
         position: absolute;
-        z-index: 0;
 
         @include breakpoint($breakpoint-xl) {
             display: none;
@@ -161,6 +160,7 @@
             height: 562px;
 
             position: relative;
+            top: 0;
             left: 0;
             z-index: 1;
 

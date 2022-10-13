@@ -5,6 +5,8 @@
     width: 80px;
     height: 80px;
 
+    transition: opacity .1s linear;
+
     @include breakpoint($breakpoint-lg) {
         width: 65px;
         height: 65px;
@@ -15,5 +17,13 @@
         height: 60px;
 
         align-self: flex-end;
+    }
+
+    &:hover {
+        opacity: .9;
+    }
+
+    &:active {
+        opacity: .7;
     }
 }
