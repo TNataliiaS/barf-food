@@ -1,5 +1,5 @@
 .otherness {
-    padding: 2px 0 7px;
+    padding: 3px 0 10px;
     position: relative;
 
     @include breakpoint($breakpoint-sm) {
@@ -7,9 +7,37 @@
         margin-bottom: -3px;
     }
 
+    &__item {
+        padding-top: 55px;
+
+        &--leaf {
+            &:before {
+                background-image: url('../images/otherness/leaf.svg');
+            }
+        }
+
+        &--heartbeat {
+            &:before {
+                background-image: url('../images/otherness/heartbeat.svg');
+            }
+        }
+
+        &--rocket {
+            &:before {
+                background-image: url('../images/otherness/rocket.svg');
+            }
+        }
+
+        &--smiley {
+            &:before {
+                background-image: url('../images/otherness/smiley.svg');
+            }
+        }
+    }
+
     &__section-title {
         display: inline-block;
-        margin-bottom: 60px;
+        margin-bottom: 57px;
 
         line-height: 1.2;
 
@@ -28,10 +56,6 @@
         }
     }
 
-    &__item-icon {
-        margin-bottom: 9px;
-    }
-
     &__title {
         margin-bottom: 8px;
 
@@ -41,6 +65,8 @@
     }
 
     &__description {
+        margin-bottom: 0;
+
         @include breakpoint($breakpoint-lg) {
             br {
                 display: none;

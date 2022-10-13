@@ -3,20 +3,28 @@
     max-width: 635px;
     padding-top: 29px;
 
+    @include breakpoint($breakpoint-lg) {
+        max-width: 380px;
+    }
+
+    @include breakpoint($breakpoint-md) {
+        max-width: none;
+    }
+
     @include breakpoint($breakpoint-xs) {
-        padding-top: 44px;
+        padding-top: 0;
     }
 
     &__header {
         margin-bottom: 32px;
 
         @include breakpoint($breakpoint-xs) {
-            margin-bottom: 19px;
+            margin-bottom: 18px;
         }
     }
 
     &__title {
-        margin-bottom: 4px;
+        margin-bottom: 5px;
 
         font-weight: 600;
         font-size: 20px;

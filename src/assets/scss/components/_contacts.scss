@@ -3,16 +3,25 @@
     max-width: 305px;
     margin-right: 182px;
 
+    @include breakpoint($breakpoint-xl) {
+        margin-right: 130px;
+    }
+
     @include breakpoint($breakpoint-xs) {
         max-width: none;
         margin-right: 0;
+        margin-bottom: 45px;
     }
 
     &__title {
-        margin-bottom: 7px;
+        margin-bottom: 8px;
 
         @extend %font-family-second;
         font-size: 46px;
+
+        @include breakpoint($breakpoint-xl) {
+            font-size: 44px;
+        }
 
         @include breakpoint($breakpoint-xs) {
             margin-bottom: 10px;
@@ -22,7 +31,7 @@
     }
 
     &__description {
-        margin-bottom: 32px;
+        margin-bottom: 31px;
     }
 
     &__phone {
@@ -39,6 +48,10 @@
     &__btn {
         position: relative;
 
+        @include breakpoint($breakpoint-sm) {
+            border-radius: 2px;
+        }
+
         &:before {
             width: 24px;
             height: 24px;
@@ -51,7 +64,7 @@
 
 
         &--whatsapp {
-            margin-bottom: 17px;
+            margin-bottom: 18px;
 
             @include breakpoint($breakpoint-xs) {
                 margin-bottom: 19px;

@@ -31,8 +31,8 @@ const ttf2woff2 = require("gulp-ttf2woff2");
 
 
 /***** Paths *****/
-const srcPath = "src/"
-const buildPath = "dist/"
+const srcPath = "src/";
+const buildPath = "dist/";
 
 const path = {
     build: {
@@ -60,7 +60,7 @@ const path = {
         fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
     clean: "./" + buildPath
-}
+};
 
 
 /***** Tasks *****/
@@ -80,7 +80,7 @@ function html() {
             collapseWhitespace: true
         }))
         .pipe(gulp.dest(path.build.html))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 }
 
 function css() {
@@ -114,7 +114,7 @@ function css() {
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(path.build.css))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 }
 
 function js() {
@@ -136,11 +136,11 @@ function js() {
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(path.build.js))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 }
 
 function images() {
-    return gulp.src([path.src.images, "!src/assets/images/sprite/*.svg"])
+    return gulp.src([path.src.images, "!src/assets/images/sprite/*.svg", "!src/assets/images/**/no-webp/*.{jpg,jpeg,png,svg,gif,ico,webp}"])
         .pipe(plumber({
             errorHandler : function(err) {
                 notify.onError({
@@ -157,7 +157,7 @@ function images() {
         .pipe(newer(path.build.images))
         .pipe(imagemin())
         .pipe(gulp.dest(path.build.images))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 }
 
 function svgsprite() {
@@ -197,7 +197,7 @@ function svgsprite() {
             },
         }))
         .pipe(gulp.dest(path.build.images))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 }
 
 function fonts() {
@@ -213,12 +213,12 @@ function fonts() {
         }))
         .pipe(newer(path.build.fonts))
         .pipe(fonter({
-            formats: ['woff', 'ttf']
+            formats: ['woff', 'ttf', 'eot']
         }))
         .pipe(gulp.dest(path.build.fonts))
         .pipe(ttf2woff2())
         .pipe(gulp.dest(path.build.fonts))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 }
 
 function server() {
@@ -229,7 +229,7 @@ function server() {
         notify: false,
         port: 3000,
         // tunnel: true,
-    })
+    });
 }
 
 function clean() {

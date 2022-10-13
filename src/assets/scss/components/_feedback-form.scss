@@ -2,10 +2,43 @@
     display: flex;
     flex-wrap: wrap;
 
+    &__group {
+        position: relative;
+        width: calc((100% - 24px) / 2);
+        margin-bottom: 17px;
+
+        @include breakpoint($breakpoint-lg) {
+            width: 100%;
+        }
+
+        @include breakpoint($breakpoint-md) {
+            width: calc((100% - 16px) / 2);
+        }
+
+        @include breakpoint($breakpoint-sm) {
+            width: 100%;
+        }
+
+        &:first-of-type {
+            margin-right: 24px;
+
+            @include breakpoint($breakpoint-lg) {
+                margin-right: 0;
+            }
+
+            @include breakpoint($breakpoint-md) {
+                margin-right: 16px;
+            }
+
+            @include breakpoint($breakpoint-sm) {
+                margin-right: 0;
+            }
+        }
+    }
+
     &__input,
     &__textarea {
-        margin-bottom: 16px;
-        padding: 15px;
+        width: 100%;
 
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.5);
@@ -17,10 +50,38 @@
         line-height: 140%;
         color: $primary-color;
 
-        @include breakpoint($breakpoint-xs) {
-            padding: 13px 13px 13px 14px;
+        @include breakpoint($breakpoint-sm) {
+            padding-left: 14px;
             border-radius: 2px;
         }
+    }
+
+    &__input {
+        padding: 13px;
+    }
+
+    &__input:focus,
+    &__input:not(:focus):valid {
+        padding: 23px 13px 4px 15px;
+    }
+
+    &__input:focus + .feedback-form__label,
+    &__input:not(:placeholder-shown) + .feedback-form__label {
+        font-size: 12px;
+
+        top: 6px;
+        left: 16px;
+    }
+
+    &__input:not(:focus):invalid {
+        padding: 23px 13px 4px 15px;
+    }
+
+    &__textarea {
+        height: 122px;
+        resize: none;
+        padding: 7px 15px 13px;
+        margin-bottom: 22px;
 
         &::placeholder {
             font-weight: 400;
@@ -29,33 +90,22 @@
             color: $primary-color;
             opacity: 0.6;
         }
-    }
-
-    &__input {
-        width: calc((100% - 24px) / 2);
 
         @include breakpoint($breakpoint-xs) {
-            width: 100%;
-        }
-
-        &:first-of-type {
-            margin-right: 24px;
-
-            @include breakpoint($breakpoint-xs) {
-                margin-right: 0;
-            }
+            margin-bottom: 14px;
         }
     }
 
-    &__textarea {
-        width: 100%;
-        height: 122px;
-        resize: none;
-        margin-bottom: 20px;
+    &__label {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: $primary-color;
+        opacity: 0.6;
 
-        @include breakpoint($breakpoint-xs) {
-            margin-bottom: 16px;
-        }
+        position: absolute;
+        top: 17px;
+        left: 18px;
     }
 
     &__checkbox {
@@ -87,30 +137,36 @@
         &:checked + label:before {
             background-color: $primary-color;
             background-image: url("../images/agree.svg");
-          }
+        }
     }
 
     &__agree {
         width: 200px;
         font-size: 12px;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-lg) {
             width: 100%;
             font-size: 11px;
         }
     }
 
     &__checkbox-block {
+        @include breakpoint($breakpoint-lg) {
+            margin-right: 16px;
+            margin-bottom: 25px;
+        }
+
         @include breakpoint($breakpoint-xs) {
-            margin-bottom: 26px;
+            margin-right: 0;
         }
     }
 
     &__btn {
         margin-left: auto;
 
-        @include breakpoint($breakpoint-xs) {
-           margin: 0 auto;
+        @include breakpoint($breakpoint-sm) {
+            width: 100%;
+            margin-left: 0;
         }
 
         .btn {
@@ -126,6 +182,7 @@
             border-radius: 8px;
 
             @include breakpoint($breakpoint-xs) {
+                width: 100%;
                 border-radius: 2px;
             }
         }

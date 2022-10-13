@@ -6,12 +6,27 @@
         flex-basis: calc((100% - 24px * 3) / 4);
         color: $secondary-color;
 
+        position: relative;
+
         &:not(:last-child) {
             margin-right: 24px;
 
             @include breakpoint($breakpoint-lg) {
                 margin-right: 0;
             }
+        }
+
+        &:before {
+            content: '';
+            width: 40px;
+            height: 40px;
+
+            background-position: center;
+            background-repeat: no-repeat;
+
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         @include breakpoint($breakpoint-lg) {
@@ -43,26 +58,24 @@
             position: relative;
 
             &:after {
-                content: url('../images/rays-up.png');
+                content: url('../images/no-webp/rays.png');
                 width: 34px;
                 height: 30px;
 
                 position: absolute;
-                top: -27px;
-                left: -17px;
+                top: -24px;
+                left: -20px;
+
+                transform: rotate(192deg);
 
                 @include breakpoint($breakpoint-sm) {
-                    top: -17px;
-                    left: 27px;
-                    transform: rotate(87deg);
+                    top: -19px;
+                    left: 26px;
+
+                    transform: rotate(287deg);
                 }
             }
         }
-    }
-
-    &__item-icon {
-        width: 40px;
-        height: 40px;
     }
 
     &__title {

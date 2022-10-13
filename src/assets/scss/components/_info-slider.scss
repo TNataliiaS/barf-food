@@ -1,14 +1,10 @@
 .info-slider {
-    padding: 32px 0;
+    padding: 32px 0 31px;
     background-color: $element-color;
 
-    background-image: url('../images/info-decorative-line.png');
-    background-repeat: no-repeat;
-    background-position: center;
+    position: relative;
 
     @include breakpoint($breakpoint-xs) {
-        background-image: url('../images/info-decorative-line-mobile.png');
-        background-position: top left 41px;
         padding: 56px 49px 70px;
     }
 
@@ -21,6 +17,25 @@
         @include breakpoint($breakpoint-sm) {
             flex-direction: row-reverse;
             justify-content: center;
+        }
+    }
+
+    &__decorative {
+        width: 1198px;
+        height: 205px;
+
+        position: absolute;
+        top: 44px;
+        left: 0;
+
+        fill: transparent;
+        stroke: $section-accent-color;
+
+        @include breakpoint($breakpoint-xs) {
+            top: 499px;
+            left: -455px;
+
+            transform: rotate(90deg);
         }
     }
 
@@ -109,6 +124,8 @@
     &__icon {
         width: 20px;
         height: 20px;
+
+        fill: $color-сomponents;
 
         @include breakpoint($breakpoint-xs) {
             width: 24px;

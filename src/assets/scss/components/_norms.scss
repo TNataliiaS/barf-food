@@ -37,7 +37,9 @@
         }
 
         &:after {
-            content: url('../images/norms-decoration.png');
+            content: url('../images/norms-decoration.svg');
+            width: 100%;
+            height: 1px;
 
             position: absolute;
             top: 25px;

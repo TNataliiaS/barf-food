@@ -28,9 +28,7 @@
             transform: rotate(-65deg);
 
             @include breakpoint($breakpoint-xs) {
-                top: 164px;
-                left: -219px;
-                transform: rotate(-58deg);
+                display: none;
             }
         }
 
@@ -40,9 +38,27 @@
             transform: rotate(-53deg);
 
             @include breakpoint($breakpoint-xs) {
-                top: 164px;
+                display: none;
+            }
+        }
+    }
+
+    &__decorative-mobile {
+        display: none;
+
+        &--primary {
+            @include breakpoint($breakpoint-xs) {
+                top: 166px;
+                left: -216px;
+                transform: rotate(-59deg);
+            }
+        }
+
+        &--second {
+            @include breakpoint($breakpoint-xs) {
+                top: 168px;
                 left: -220px;
-                transform: rotate(-46deg);
+                transform: rotate(-47deg);
             }
         }
     }
@@ -71,24 +87,19 @@
 
         @include breakpoint($breakpoint-xs) {
             display: block;
-            padding-bottom: 146px;
+            padding-bottom: 145px;
         }
     }
 
     &__pictures-wrapper {
         position: relative;
 
-        &:before {
+        &:before,
+        &:after {
             content: '';
-            background-image: url('../images/about-us/about-us-dog.png');
             background-size: cover;
-            width: 183px;
-            height: 183px;
 
             position: absolute;
-            top: 475px;
-            left: -55px;
-            z-index: 2;
 
             @include breakpoint($breakpoint-xl) {
                 display: none;
@@ -96,8 +107,24 @@
 
             @include breakpoint($breakpoint-xs) {
                 display: block;
+            }
+        }
+
+        &:before {
+            width: 183px;
+            height: 183px;
+
+            background-image: url('../images/about-us/no-webp/about-us-dog.png');
+
+            top: 475px;
+            left: -55px;
+            z-index: 2;
+
+            @include breakpoint($breakpoint-xs) {
                 width: 101px;
                 height: 101px;
+
+                background-image: url('../images/about-us/no-webp/about-us-dog-mobile.png');
 
                 top: 261px;
                 left: 0px;
@@ -105,25 +132,20 @@
         }
 
         &:after {
-            content: '';
-            background-image: url('../images/about-us/about-us-heart.png');
-            background-size: cover;
             width: 120px;
             height: 120px;
 
-            position: absolute;
+            background-image: url('../images/about-us/no-webp/about-us-heart.png');
+
             top: 287px;
             left: 415px;
             z-index: 3;
 
-            @include breakpoint($breakpoint-xl) {
-                display: none;
-            }
-
             @include breakpoint($breakpoint-xs) {
-                display: block;
                 width: 66px;
                 height: 66px;
+
+                background-image: url('../images/about-us/no-webp/about-us-heart-mobile.png');
 
                 top: 158px;
                 left: 261px;
@@ -132,6 +154,8 @@
     }
 
     &__img {
+        object-fit: cover;
+
         &--primary  {
             width: 475px;
             height: 562px;
@@ -142,7 +166,7 @@
 
             @include breakpoint($breakpoint-xs) {
                 width: 261px;
-                height: auto;
+                height: 309px;
             }
         }
 
@@ -162,7 +186,7 @@
             @include breakpoint($breakpoint-xs) {
                 display: block;
                 width: 202px;
-                height: auto;
+                height: 217px;
 
                 top: 196px;
                 left: 149px;
@@ -173,12 +197,12 @@
     &__content {
         max-width: 525px;
         padding-top: 120px;
-        padding-bottom: 118px;
+        padding-bottom: 119px;
 
         @include breakpoint($breakpoint-xl) {
             max-width: none;
             padding-top: 53px;
-            padding-bottom: 76px;
+            padding-bottom: 77px;
         }
 
         p {
@@ -195,18 +219,25 @@
     &__title {
         margin-bottom: 43px;
 
-        @include breakpoint($breakpoint-xs) {
-            margin-bottom: 26px;
+        &--rays {
+            &:after {
+                @include breakpoint($breakpoint-sm) {
+                    display: none;
+                }
 
-            &--rays {
-                &:after {
-                    content: url('../images/rays-up.png');
+                @include breakpoint($breakpoint-xs) {
+                    display: block;
 
-                    bottom: 22px;
-                    left: 279px;
-                    transform: rotate(71deg);
+                    bottom: 21px;
+                    left: 278px;
+
+                    transform: rotate(270deg);
                 }
             }
+        }
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 26px;
 
             br {
                 display: none;

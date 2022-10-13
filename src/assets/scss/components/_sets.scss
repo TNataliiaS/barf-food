@@ -92,7 +92,7 @@
         &:first-child {
             grid-column: 1 / span 3;
 
-            @include breakpoint($breakpoint-xl) {
+            @include breakpoint($breakpoint-xxl) {
                 grid-column: 4 / span 3;
             }
 
@@ -104,7 +104,7 @@
         &:nth-child(2) {
             grid-column: 4 / span 3;
 
-            @include breakpoint($breakpoint-xl) {
+            @include breakpoint($breakpoint-xxl) {
                 grid-column: 7 / span 3;
             }
 
@@ -116,7 +116,7 @@
         &:nth-child(3) {
             grid-column: 7 / span 3;
 
-            @include breakpoint($breakpoint-xl) {
+            @include breakpoint($breakpoint-xxl) {
                 grid-column: 10 / -1;
             }
 
