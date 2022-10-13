@@ -1,5 +1,11 @@
 .faq {
     @extend %grid-columns;
+    margin-bottom: -2px;
+
+    @include breakpoint($breakpoint-xs) {
+        margin-top: -2px;
+        margin-bottom: 0;
+    }
 
     &__title {
         grid-column: 1 / span 4;
@@ -11,7 +17,7 @@
     }
 
     &__wrapper {
-        margin-bottom: 1px;
+        margin-bottom: 2px;
         margin-left: 16px;
         grid-column: 5 / -1;
 
@@ -41,7 +47,7 @@
         }
 
         &--active {
-            padding-bottom: 28px;
+            padding-bottom: 31px;
             border-bottom: 1px solid #E5E5E5;
 
             @include breakpoint($breakpoint-xs) {
@@ -49,7 +55,7 @@
             }
 
             .faq__header {
-                padding-bottom: 12px;
+                padding-bottom: 10px;
                 border: 0;
 
                 @include breakpoint($breakpoint-xs) {

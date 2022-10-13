@@ -1,8 +1,8 @@
 .delivery {
-    padding-top: 77px;
+    padding-top: 78px;
 
     @include breakpoint($breakpoint-xs) {
-        padding-top: 35px;
+        padding-top: 34px;
         position: relative;
 
         &:before {
@@ -16,10 +16,34 @@
     }
 
     &__item {
-        position: relative;
+        padding-top: 57px;
 
         @include breakpoint($breakpoint-xs) {
             margin-left: 32px;
+        }
+
+        &--package {
+            &:before {
+                background-image: url('../images/delivery/package.svg');
+            }
+        }
+
+        &--phone-call {
+            &:before {
+                background-image: url('../images/delivery/phone-call.svg');
+            }
+        }
+
+        &--clock {
+            &:before {
+                background-image: url('../images/delivery/clock.svg');
+            }
+        }
+
+        &--heart {
+            &:before {
+                background-image: url('../images/delivery/heart.svg');
+            }
         }
 
         &:not(:last-child) {

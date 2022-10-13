@@ -1,12 +1,12 @@
 .footer {
+    background-color: $color-сomponents;
+
     &__inner {
         padding-top: 81px;
         padding-bottom: 68px;
         overflow: hidden;
 
         color: $primary-color;
-
-        background-color: $color-сomponents;
 
         position: relative;
 
@@ -170,11 +170,13 @@
         }
 
         &--meat {
-            width: 175px;
-            height: 174px;
+            width: 134px;
+            height: 133px;
 
-            top: 240px;
-            left: 414px;
+            top: 261px;
+            left: 436px;
+
+            transform: rotate(-68deg);
 
             @include breakpoint($breakpoint-xxl) {
                 left: 340px;
@@ -190,11 +192,11 @@
             }
 
             @include breakpoint($breakpoint-sm) {
-                width: 105px;
-                height: 104px;
+                width: 80px;
+                height: 79px;
 
-                top: 415px;
-                left: 264px;
+                top: 428px;
+                left: 277px;
             }
         }
 
@@ -231,6 +233,8 @@
 
             bottom: 8px;
             right: 41px;
+
+            transform: scale(-1, 1);
 
             @include breakpoint($breakpoint-xxl) {
                 right: 375px;

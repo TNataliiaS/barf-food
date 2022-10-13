@@ -2,13 +2,13 @@
     width: 280px;
     padding: 35px 25px 25px;
     grid-column: 10 / -1;
+    overflow: hidden;
 
     background-color: $element-color;
-    background-image: url('../images/calculator-decorative-element.png');
-    background-repeat: no-repeat;
-    background-position: center;
 
-    @include breakpoint($breakpoint-xl) {
+    position: relative;
+
+    @include breakpoint($breakpoint-xxl) {
         grid-column: 1 / span 3;
         grid-row: 1;
     }
@@ -22,9 +22,6 @@
         display: none;
         grid-column: 1 / -1;
         padding: 0;
-
-        background-image: url('../images/calculator-decorative-element-mobile.png');
-        background-position: top center;
 
         @include breakpoint($breakpoint-xs) {
             display: block;
@@ -43,6 +40,38 @@
             margin-bottom: 24px;
             font-size: 20px;
         }
+    }
+
+    &__apple {
+        width: 119px;
+        height: 119px;
+
+        position: absolute;
+        bottom: 84px;
+        left: 8px;
+    }
+
+    &__meat {
+        width: 149px;
+        height: 149px;
+
+        position: absolute;
+        bottom: 25px;
+        right: 9px;
+    }
+
+    &__decorative {
+        width: 767px;
+        height: 124px;
+
+        fill: transparent;
+        stroke: $primary-color;
+
+        position: absolute;
+        top: 321px;
+        left: -249px;
+
+        transform: rotate(-40.6deg);
     }
 
     &__wrapper {

@@ -7,7 +7,7 @@
 
     color: $primary-color;
 
-    background: $color-content url("../images/intro-bg.jpg") center no-repeat;
+    background: $color-content url("../images/no-webp/intro-bg.jpg") center no-repeat;
     background-size: cover;
 
     position: relative;
@@ -23,7 +23,7 @@
 
     @include breakpoint($breakpoint-xs) {
         height: 746px;
-        background-image: url('../images/intro-bg-mobile.jpg');
+        background-image: url('../images/no-webp/intro-bg-mobile.jpg');
     }
 
     &__inner {
