@@ -140,7 +140,7 @@ function js() {
 }
 
 function images() {
-    return gulp.src([path.src.images, "!src/assets/images/sprite/*.svg", "!src/assets/images/**/no-webp/*.{jpg,jpeg,png,svg,gif,ico,webp}"])
+    return gulp.src([path.src.images, "!src/assets/images/sprite/*.svg", "!src/assets/images/**/no-webp/**/*.{jpg,jpeg,png,svg,gif,ico,webp}"])
         .pipe(plumber({
             errorHandler : function(err) {
                 notify.onError({
