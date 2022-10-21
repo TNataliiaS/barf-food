@@ -10,6 +10,8 @@
     @include breakpoint($breakpoint-lg) {
         width: 65px;
         height: 65px;
+
+        z-index: 2;
     }
 
     @include breakpoint($breakpoint-xs) {

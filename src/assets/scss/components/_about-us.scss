@@ -219,19 +219,10 @@
     &__title {
         margin-bottom: 43px;
 
-        &--rays {
+        &--rays.section__title--rays {
             &:after {
                 @include breakpoint($breakpoint-sm) {
                     display: none;
-                }
-
-                @include breakpoint($breakpoint-xs) {
-                    display: block;
-
-                    bottom: 21px;
-                    left: 278px;
-
-                    transform: rotate(270deg);
                 }
             }
         }

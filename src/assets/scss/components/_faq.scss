@@ -17,7 +17,7 @@
     }
 
     &__wrapper {
-        margin-bottom: 2px;
+        margin-bottom: 1px;
         margin-left: 16px;
         grid-column: 5 / -1;
 
@@ -29,16 +29,19 @@
     }
 
     &__item {
+        padding-bottom: 31px;
+
+        @include breakpoint($breakpoint-xs) {
+            padding-bottom: 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
 
         &:first-child {
             .faq__header {
                 padding-top: 0;
-            }
-        }
-
-        &:last-child {
-            .faq__header{
-                padding-bottom: 0;
             }
         }
 
@@ -47,7 +50,6 @@
         }
 
         &--active {
-            padding-bottom: 31px;
             border-bottom: 1px solid #E5E5E5;
 
             @include breakpoint($breakpoint-xs) {
@@ -64,7 +66,13 @@
             }
 
             .faq__btn-vertical-line {
+                transform: rotate(0deg);
                 opacity: 0;
+            }
+
+            .faq__content {
+                height: 100%;
+                opacity: 1;
             }
         }
     }
@@ -74,11 +82,10 @@
         justify-content: space-between;
         align-items: flex-start;
         padding-top: 32px;
-        padding-bottom: 31px;
 
         cursor: pointer;
 
-        transition: opacity .2s linear;
+        transition: all .2s linear;
 
         &:hover .faq__item-title,
         &:hover .faq__btn {
@@ -147,11 +154,17 @@
     &__btn-vertical-line {
         opacity: 1;
         transform: rotate(90deg);
+
+        transition: all .2s linear;
     }
 
     &__content {
         width: 100%;
         max-width: 695px;
+        height: 0;
+        opacity: 0;
+
+        transition: opacity .1s linear;
 
         @include breakpoint($breakpoint-xs) {
             font-size: 14px;

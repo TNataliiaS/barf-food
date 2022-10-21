@@ -1,22 +1,28 @@
 .info-slider {
-    padding: 32px 0 31px;
+    padding: 32px 0 30px;
     background-color: $element-color;
 
     position: relative;
 
+    @include breakpoint($breakpoint-md) {
+        padding-bottom: 50px;
+    }
+
     @include breakpoint($breakpoint-xs) {
-        padding: 56px 49px 70px;
+        padding-bottom: 71px;
     }
 
     &__wrapper {
-        display: flex;
         justify-content: space-between;
         margin: 0 auto;
         max-width: 1040px;
 
-        @include breakpoint($breakpoint-sm) {
-            flex-direction: row-reverse;
+        @include breakpoint($breakpoint-lg) {
             justify-content: center;
+        }
+
+        @include breakpoint($breakpoint-md) {
+            justify-content: flex-start;
         }
     }
 
@@ -34,7 +40,6 @@
         @include breakpoint($breakpoint-xs) {
             top: 499px;
             left: -455px;
-
             transform: rotate(90deg);
         }
     }
@@ -42,29 +47,41 @@
     &__item {
         display: flex;
         flex-wrap: wrap;
+        flex-grow: 1;
         width: 100%;
         max-width: 449px;
         height: 225px;
-        flex-grow: 1;
 
         @include breakpoint($breakpoint-xl) {
+            max-width: 410px;
             height: auto;
             justify-content: space-between;
         }
 
-        @include breakpoint($breakpoint-md) {
-            margin: 0 auto;
+        @include breakpoint($breakpoint-lg) {
+            justify-content: center;
+        }
 
-            &:nth-child(1) {
-                display: none;
-            }
+        @include breakpoint($breakpoint-md) {
+            max-width: none;
+        }
+
+        @include breakpoint($breakpoint-xs) {
+            padding-top: 23px;
+            padding-left: 49px;
+            justify-content: flex-start;
         }
 
         &:first-of-type {
-            margin-right: 40px;
+            margin-right: 20px;
 
             @include breakpoint($breakpoint-xl) {
                 margin-left: 20px;
+            }
+
+            @include breakpoint($breakpoint-md) {
+                margin: 0;
+                order: 2;
             }
         }
 
@@ -74,15 +91,8 @@
             }
 
             @include breakpoint($breakpoint-md) {
-                margin: 0 auto;
-            }
-
-            @include breakpoint($breakpoint-sm) {
-                margin: 0 15px;
-            }
-
-            @include breakpoint($breakpoint-xs) {
-                margin: 0 auto;
+                margin: 0;
+                order: 1;
             }
         }
     }
@@ -95,7 +105,16 @@
         line-height: 2;
         font-weight: 600;
         color: $secondary-color;
-        text-transform: uppercase;
+    }
+
+    &__list-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include breakpoint($breakpoint-lg) {
+            flex-direction: column;
+        }
     }
 
     &__list {
@@ -130,6 +149,26 @@
         @include breakpoint($breakpoint-xs) {
             width: 24px;
             height: 24px;
+        }
+    }
+
+    &.swiper  {
+        margin: 0;
+    }
+
+    &__pagination {
+        &.swiper-pagination {
+            bottom: 18px;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: transparent;
+            border: 1px solid $color-сomponents;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: $color-сomponents;
         }
     }
 }

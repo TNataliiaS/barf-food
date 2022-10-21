@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <link rel="stylesheet" href="./assets/css/vendor.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./assets/css/style.min.css">
     <title>ZOOOV - Натуральное питание для собак по системе BARF</title>
 </head>
@@ -12,38 +14,50 @@
 <div class="page">
 
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="header__nav">
                 <a class="logo" href="#">
                     <img class="img" src="./assets/images/logo.svg" alt="Логотип ZOOOV с изображением счастливого пса">
                 </a>
 
-                <ul class="site-nav">
+                <ul class="site-nav" id="site-nav">
                     <li class="site-nav__item">
-                        <a class="site-nav__link text-uppercase" href="#">barf</a>
+                        <a class="site-nav__link text-uppercase" href="#about-product">barf</a>
                     </li>
                     <li class="site-nav__item">
-                        <a class="site-nav__link" href="#">Рационы</a>
+                        <a class="site-nav__link" href="#rations">Рационы</a>
                     </li>
                     <li class="site-nav__item">
-                        <a class="site-nav__link text-uppercase" href="#">zooov</a>
+                        <a class="site-nav__link text-uppercase" href="#otherness">zooov</a>
                     </li>
                     <li class="site-nav__item">
-                        <a class="site-nav__link" href="#">О нас</a>
+                        <a class="site-nav__link" href="#about-us">О нас</a>
                     </li>
                     <li class="site-nav__item">
-                        <a class="site-nav__link" href="#">Доставка</a>
+                        <a class="site-nav__link" href="#delivery">Доставка</a>
                     </li>
                     <li class="site-nav__item">
-                        <a class="site-nav__link text-uppercase" href="#">faq</a>
+                        <a class="site-nav__link text-uppercase" href="#faq">faq</a>
                     </li>
                     <li class="site-nav__item">
-                        <a class="site-nav__link" href="#">Контакты</a>
+                        <a class="site-nav__link" href="#contacts">Контакты</a>
                     </li>
+
+                    <svg class="site-nav__decorative site-nav__decorative--one">
+                        <use href="./assets/images/sprite/sprite.svg#decorative-line-block"></use>
+                    </svg>
+
+                    <svg class="site-nav__decorative site-nav__decorative--two">
+                        <use href="./assets/images/sprite/sprite.svg#decorative-line-block"></use>
+                    </svg>
+
+                    <svg class="site-nav__decorative site-nav__decorative--rays">
+                        <use href="./assets/images/sprite/sprite.svg#rays"></use>
+                    </svg>
                 </ul>
 
-                <button class="burger" type="button">
+                <button class="burger" id="burger" type="button">
                     <span class="burger__line">Меню</span>
                     <span class="burger__line">Меню</span>
                     <span class="burger__line">Меню</span>
@@ -54,11 +68,11 @@
 
 
     <!-- Main -->
-    <main>
+    <main id="main">
         <h1 class="visually-hidden">ZOOOV - Натуральное питание для собак по системе BARF</h1>
 
         <!-- Intro -->
-        <div class="intro">
+        <div class="intro" id="intro">
             <div class="container">
                 <div class="intro__inner">
                     <h2 class="intro__title">Натуральные рационы питания для собак по&nbsp;системе <span class="text-uppercase">BARF</span></h2>
@@ -76,7 +90,7 @@
 
 
         <!-- About product -->
-        <section class="section section--mobile-indent">
+        <section class="section section--mobile-indent" id="about-product">
             <div class="container">
                 <div class="about-product">
                     <div class="about-product__content">
@@ -101,108 +115,114 @@
                         <img class="img" src="./assets/images/about-product/about-product-photo@1x.jpg" srcset="./assets/images/about-product/about-product-photo@2x.jpg 2x" alt="Собака наслаждается ароматом пищи">
                     </picture>
 
-                    <div class="about-product__slider info-slider">
-                        <div class="info-slider__wrapper">
-                            <div class="info-slider__item">
-                                <h3 class="info-slider__title">Для взрослых</h3>
-                                <ul class="info-slider__list">
-                                    <li class="info-slider__list-item">
-                                        <svg class="info-slider__icon">
-                                            <use href="./assets/images/sprite/sprite.svg#meat-icon"></use>
-                                        </svg>
-                                        <span>Мясо – 70%</span>
-                                    </li>
-                                    <li class="info-slider__list-item">
-                                        <svg class="info-slider__icon">
-                                            <use href="./assets/images/sprite/sprite.svg#bones-icon"></use>
-                                        </svg>
-                                        <span>Кости – 10%</span>
-                                    </li>
-                                    <li class="info-slider__list-item">
-                                        <svg class="info-slider__icon">
-                                            <use href="./assets/images/sprite/sprite.svg#vegetables-icon"></use>
-                                        </svg>
-                                        <span>Овощи – 7%</span>
-                                    </li>
-                                    <li class="info-slider__list-item">
-                                        <svg class="info-slider__icon">
-                                            <use href="./assets/images/sprite/sprite.svg#liver-icon"></use>
-                                        </svg>
-                                        <span>Печень – 5%</span>
-                                    </li>
-                                </ul>
-                                <ul class="info-slider__list">
-                                    <li class="info-slider__list-item">
-                                        <svg class="info-slider__icon">
-                                            <use href="./assets/images/sprite/sprite.svg#by-prod-icon"></use>
-                                        </svg>
-                                        <span>Субпродукты – 5%</span>
-                                    </li>
-                                    <li class="info-slider__list-item">
-                                        <svg class="info-slider__icon">
-                                            <use href="./assets/images/sprite/sprite.svg#seeds-icon"></use>
-                                        </svg>
-                                        <span>Семена/Орехи – 2%</span>
-                                    </li>
-                                    <li class="info-slider__list-item">
-                                        <svg class="info-slider__icon">
-                                            <use href="./assets/images/sprite/sprite.svg#fruits-icon"></use>
-                                        </svg>
-                                        <span>Фрукты – 1%</span>
-                                    </li>
-                                </ul>
+                    <div class="about-product__slider info-slider swiper">
+                        <div class="info-slider__wrapper swiper-wrapper">
+                            <div class="info-slider__item swiper-slide">
+                                <div class="info-slider__list-wrapper">
+                                    <h3 class="info-slider__title text-uppercase">Для взрослых</h3>
+                                    <ul class="info-slider__list">
+                                        <li class="info-slider__list-item">
+                                            <svg class="info-slider__icon">
+                                                <use href="./assets/images/sprite/sprite.svg#meat-icon"></use>
+                                            </svg>
+                                            <span>Мясо – 70%</span>
+                                        </li>
+                                        <li class="info-slider__list-item">
+                                            <svg class="info-slider__icon">
+                                                <use href="./assets/images/sprite/sprite.svg#bones-icon"></use>
+                                            </svg>
+                                            <span>Кости – 10%</span>
+                                        </li>
+                                        <li class="info-slider__list-item">
+                                            <svg class="info-slider__icon">
+                                                <use href="./assets/images/sprite/sprite.svg#vegetables-icon"></use>
+                                            </svg>
+                                            <span>Овощи – 7%</span>
+                                        </li>
+                                        <li class="info-slider__list-item">
+                                            <svg class="info-slider__icon">
+                                                <use href="./assets/images/sprite/sprite.svg#liver-icon"></use>
+                                            </svg>
+                                            <span>Печень – 5%</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="info-slider__list">
+                                        <li class="info-slider__list-item">
+                                            <svg class="info-slider__icon">
+                                                <use href="./assets/images/sprite/sprite.svg#by-prod-icon"></use>
+                                            </svg>
+                                            <span>Субпродукты – 5%</span>
+                                        </li>
+                                        <li class="info-slider__list-item">
+                                            <svg class="info-slider__icon">
+                                                <use href="./assets/images/sprite/sprite.svg#seeds-icon"></use>
+                                            </svg>
+                                            <span>Семена/Орехи – 2%</span>
+                                        </li>
+                                        <li class="info-slider__list-item">
+                                            <svg class="info-slider__icon">
+                                                <use href="./assets/images/sprite/sprite.svg#fruits-icon"></use>
+                                            </svg>
+                                            <span>Фрукты – 1%</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </div><!-- /.info-slider__item -->
 
-                            <div class="info-slider__item">
-                                <h3 class="info-slider__title">Для щенков</h3>
-                                <ul class="info-slider__list">
-                                    <li class="info-slider__list-item">
-                                        <svg class="info-slider__icon">
-                                            <use href="./assets/images/sprite/sprite.svg#meat-icon"></use>
-                                        </svg>
-                                        <span>Мясо – 58%</span>
-                                    </li>
-                                    <li class="info-slider__list-item">
-                                        <svg class="info-slider__icon">
-                                            <use href="./assets/images/sprite/sprite.svg#bones-icon"></use>
-                                        </svg>
-                                        <span>Кости – 17%</span>
-                                    </li>
-                                    <li class="info-slider__list-item">
-                                        <svg class="info-slider__icon">
-                                            <use href="./assets/images/sprite/sprite.svg#vegetables-icon"></use>
-                                        </svg>
-                                        <span>Овощи – 7%</span>
-                                    </li>
-                                    <li class="info-slider__list-item">
-                                        <svg class="info-slider__icon">
-                                            <use href="./assets/images/sprite/sprite.svg#liver-icon"></use>
-                                        </svg>
-                                        <span>Печень – 7%</span>
-                                    </li>
-                                </ul>
-                                <ul class="info-slider__list">
-                                    <li class="info-slider__list-item">
-                                        <svg class="info-slider__icon">
-                                            <use href="./assets/images/sprite/sprite.svg#by-prod-icon"></use>
-                                        </svg>
-                                        <span>Субпродукты – 7%</span>
-                                    </li>
-                                    <li class="info-slider__list-item">
-                                        <svg class="info-slider__icon">
-                                            <use href="./assets/images/sprite/sprite.svg#seeds-icon"></use>
-                                        </svg>
-                                        <span>Семена/Орехи – 3%</span>
-                                    </li>
-                                    <li class="info-slider__list-item">
-                                        <svg class="info-slider__icon">
-                                            <use href="./assets/images/sprite/sprite.svg#fruits-icon"></use>
-                                        </svg>
-                                        <span>Фрукты – 1%</span>
-                                    </li>
-                                </ul>
+                            <div class="info-slider__item swiper-slide">
+                                <div class="info-slider__list-wrapper">
+                                    <h3 class="info-slider__title text-uppercase">Для щенков</h3>
+                                    <ul class="info-slider__list">
+                                        <li class="info-slider__list-item">
+                                            <svg class="info-slider__icon">
+                                                <use href="./assets/images/sprite/sprite.svg#meat-icon"></use>
+                                            </svg>
+                                            <span>Мясо – 58%</span>
+                                        </li>
+                                        <li class="info-slider__list-item">
+                                            <svg class="info-slider__icon">
+                                                <use href="./assets/images/sprite/sprite.svg#bones-icon"></use>
+                                            </svg>
+                                            <span>Кости – 17%</span>
+                                        </li>
+                                        <li class="info-slider__list-item">
+                                            <svg class="info-slider__icon">
+                                                <use href="./assets/images/sprite/sprite.svg#vegetables-icon"></use>
+                                            </svg>
+                                            <span>Овощи – 7%</span>
+                                        </li>
+                                        <li class="info-slider__list-item">
+                                            <svg class="info-slider__icon">
+                                                <use href="./assets/images/sprite/sprite.svg#liver-icon"></use>
+                                            </svg>
+                                            <span>Печень – 7%</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="info-slider__list">
+                                        <li class="info-slider__list-item">
+                                            <svg class="info-slider__icon">
+                                                <use href="./assets/images/sprite/sprite.svg#by-prod-icon"></use>
+                                            </svg>
+                                            <span>Субпродукты – 7%</span>
+                                        </li>
+                                        <li class="info-slider__list-item">
+                                            <svg class="info-slider__icon">
+                                                <use href="./assets/images/sprite/sprite.svg#seeds-icon"></use>
+                                            </svg>
+                                            <span>Семена/Орехи – 3%</span>
+                                        </li>
+                                        <li class="info-slider__list-item">
+                                            <svg class="info-slider__icon">
+                                                <use href="./assets/images/sprite/sprite.svg#fruits-icon"></use>
+                                            </svg>
+                                            <span>Фрукты – 1%</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div><!-- /.info-slider__item -->
                         </div><!-- /.info-slider__wrapper -->
+                        <div class="info-slider__pagination swiper-pagination"></div>
                         <svg class="info-slider__decorative">
                             <use href="./assets/images/sprite/sprite.svg#info-decorative-line"></use>
                         </svg>
@@ -224,91 +244,94 @@
                         <p class="section__description sets__description">Порой очень сложно определиться с выбором и хочется попробовать всё и сразу. Ваш хвостик может попробовать разные вкусы и определится что ему больше нравится.</p>
                     </div>
 
-                    <ul class="sets__slider">
-                        <li class="sets__item sets-item">
-                            <p class="sets-item__chevron">Для собак до 10кг</p>
-                            <a class="sets-item__link" href="#">
+                    <div class="sets__slider swiper swiper--primary">
+                        <ul class="sets__slider-wrapper swiper-wrapper">
+                            <li class="sets__item sets-item swiper-slide">
+                                <p class="sets-item__chevron">Для собак до 10кг</p>
+                                <a class="sets-item__link" href="#">
+                                    <picture>
+                                        <source srcset="./assets/images/sets/trial-sets-m@1x.webp 1x, ./assets/images/sets/trial-sets-m@2x.webp 2x" type="image/webp">
+                                        <img class="sets-item__img img" src="./assets/images/sets/trial-sets-m@1x.jpg" srcset="./assets/images/sets/trial-sets-m@2x.jpg 2x" alt="Счастливый пес с набором M">
+                                    </picture>
+                                </a>
+                                <div class="sets-item__content">
+                                    <h4 class="sets-item__title">
+                                        <a href="#">Набор M</a>
+                                    </h4>
+                                    <ul class="sets-item__list">
+                                        <li>4 шт. – баранина/кролик</li>
+                                        <li>3 шт. – говядина/индейка</li>
+                                    </ul>
+                                    <p class="sets-item__info">Вес каждой упаковки – 300г</p>
+                                    <p class="sets-item__price"><s>2 423.-</s> <span> 1 680.-</span></p>
+                                    <button class="sets-item__btn btn btn--secondary" type="button">Заказать</button>
+                                </div>
+                            </li>
+
+                            <li class="sets__item sets-item swiper-slide">
+                                <p class="sets-item__chevron">Для собак до 15кг</p>
+                                <a class="sets-item__link" href="#">
+                                    <picture>
+                                        <source srcset="./assets/images/sets/trial-sets-l@1x.webp 1x, ./assets/images/sets/trial-sets-l@2x.webp 2x" type="image/webp">
+                                        <img class="sets-item__img img" src="./assets/images/sets/trial-sets-l@1x.jpg" srcset="./assets/images/sets/trial-sets-l@2x.jpg 2x" alt="Счастливый пес с набором L">
+                                    </picture>
+                                </a>
+                                <div class="sets-item__content">
+                                    <h4 class="sets-item__title">
+                                        <a href="#">Набор L</a>
+                                    </h4>
+                                    <ul class="sets-item__list">
+                                        <li>4 шт. – баранина/кролик</li>
+                                        <li>3 шт. – говядина/индейка</li>
+                                    </ul>
+                                    <p class="sets-item__info">Вес каждой упаковки – 500г</p>
+                                    <p class="sets-item__price"><s>3 983.-</s> <span> 2 770.-</span></p>
+                                    <button class="sets-item__btn btn btn--secondary" type="button">Заказать</button>
+                                </div>
+                            </li>
+
+                            <li class="sets__item sets-item swiper-slide">
+                                <p class="sets-item__chevron">Для собак до 20кг</p>
+                                <a class="sets-item__link" href="#">
+                                    <picture>
+                                        <source srcset="./assets/images/sets/trial-sets-xl@1x.webp 1x, ./assets/images/sets/trial-sets-xl@2x.webp 2x" type="image/webp">
+                                        <img class="sets-item__img img" src="./assets/images/sets/trial-sets-xl@1x.jpg" srcset="./assets/images/sets/trial-sets-xl@2x.jpg 2x" alt="Счастливый пес с набором XL">
+                                    </picture>
+                                </a>
+                                <div class="sets-item__content">
+                                    <h4 class="sets-item__title">
+                                        <a href="#">Набор XL</a>
+                                    </h4>
+                                    <ul class="sets-item__list">
+                                        <li>4 шт. – баранина/кролик</li>
+                                        <li>3 шт. – говядина/индейка</li>
+                                    </ul>
+                                    <p class="sets-item__info">Вес каждой упаковки – 700г</p>
+                                    <p class="sets-item__price"><s>5 437.-</s> <span> 3 810.-</span></p>
+                                    <button class="sets-item__btn btn btn--secondary" type="button">Заказать</button>
+                                </div>
+                            </li>
+
+                            <li class="calculator swiper-slide">
+                                <p class="calculator__description">Рассчитаем в каком количестве нужно кормить вашего хвостика рационами Zooov</p>
+                                <a class="btn btn--primary" href="#">Расчитать</a>
                                 <picture>
-                                    <source srcset="./assets/images/sets/trial-sets-m@1x.webp 1x, ./assets/images/sets/trial-sets-m@2x.webp 2x" type="image/webp">
-                                    <img class="sets-item__img img" src="./assets/images/sets/trial-sets-m@1x.jpg" srcset="./assets/images/sets/trial-sets-m@2x.jpg 2x" alt="Счастливый пес с набором M">
+                                    <source srcset="./assets/images/apple@1x.webp 1x, ./assets/images/apple@2x.webp 2x" type="image/webp">
+                                    <img class="calculator__apple" src="./assets/images/apple@1x.png" srcset="./assets/images/apple@2x.png 2x" alt="Половинка яблока">
                                 </picture>
-                            </a>
-                            <div class="sets-item__content">
-                                <h4 class="sets-item__title">
-                                    <a href="#">Набор M</a>
-                                </h4>
-                                <ul class="sets-item__list">
-                                    <li>4 шт. – баранина/кролик</li>
-                                    <li>3 шт. – говядина/индейка</li>
-                                </ul>
-                                <p class="sets-item__info">Вес каждой упаковки – 300г</p>
-                                <p class="sets-item__price"><s>2 423.-</s> <span> 1 680.-</span></p>
-                                <button class="sets-item__btn btn btn--secondary" type="button">Заказать</button>
-                            </div>
-                        </li>
 
-                        <li class="sets__item sets-item">
-                            <p class="sets-item__chevron">Для собак до 15кг</p>
-                            <a class="sets-item__link" href="#">
                                 <picture>
-                                    <source srcset="./assets/images/sets/trial-sets-l@1x.webp 1x, ./assets/images/sets/trial-sets-l@2x.webp 2x" type="image/webp">
-                                    <img class="sets-item__img img" src="./assets/images/sets/trial-sets-l@1x.jpg" srcset="./assets/images/sets/trial-sets-l@2x.jpg 2x" alt="Счастливый пес с набором L">
+                                    <source srcset="./assets/images/meat@1x.webp 1x, ./assets/images/meat@2x.webp 2x" type="image/webp">
+                                    <img class="calculator__meat" src="./assets/images/meat@1x.png" srcset="./assets/images/meat@2x.png 2x" alt="Кусок сочного мяса">
                                 </picture>
-                            </a>
-                            <div class="sets-item__content">
-                                <h4 class="sets-item__title">
-                                    <a href="#">Набор L</a>
-                                </h4>
-                                <ul class="sets-item__list">
-                                    <li>4 шт. – баранина/кролик</li>
-                                    <li>3 шт. – говядина/индейка</li>
-                                </ul>
-                                <p class="sets-item__info">Вес каждой упаковки – 500г</p>
-                                <p class="sets-item__price"><s>3 983.-</s> <span> 2 770.-</span></p>
-                                <button class="sets-item__btn btn btn--secondary" type="button">Заказать</button>
-                            </div>
-                        </li>
 
-                        <li class="sets__item sets-item">
-                            <p class="sets-item__chevron">Для собак до 20кг</p>
-                            <a class="sets-item__link" href="#">
-                                <picture>
-                                    <source srcset="./assets/images/sets/trial-sets-xl@1x.webp 1x, ./assets/images/sets/trial-sets-xl@2x.webp 2x" type="image/webp">
-                                    <img class="sets-item__img img" src="./assets/images/sets/trial-sets-xl@1x.jpg" srcset="./assets/images/sets/trial-sets-xl@2x.jpg 2x" alt="Счастливый пес с набором XL">
-                                </picture>
-                            </a>
-                            <div class="sets-item__content">
-                                <h4 class="sets-item__title">
-                                    <a href="#">Набор XL</a>
-                                </h4>
-                                <ul class="sets-item__list">
-                                    <li>4 шт. – баранина/кролик</li>
-                                    <li>3 шт. – говядина/индейка</li>
-                                </ul>
-                                <p class="sets-item__info">Вес каждой упаковки – 700г</p>
-                                <p class="sets-item__price"><s>5 437.-</s> <span> 3 810.-</span></p>
-                                <button class="sets-item__btn btn btn--secondary" type="button">Заказать</button>
-                            </div>
-                        </li>
-
-                        <div class="calculator">
-                            <p class="calculator__description">Рассчитаем в каком количестве нужно кормить вашего хвостика рационами Zooov</p>
-                            <a class="btn btn--primary" href="#">Расчитать</a>
-                            <picture>
-                                <source srcset="./assets/images/apple@1x.webp 1x, ./assets/images/apple@2x.webp 2x" type="image/webp">
-                                <img class="calculator__apple" src="./assets/images/apple@1x.png" srcset="./assets/images/apple@2x.png 2x" alt="Половинка яблока">
-                            </picture>
-
-                            <picture>
-                                <source srcset="./assets/images/meat@1x.webp 1x, ./assets/images/meat@2x.webp 2x" type="image/webp">
-                                <img class="calculator__meat" src="./assets/images/meat@1x.png" srcset="./assets/images/meat@2x.png 2x" alt="Кусок сочного мяса">
-                            </picture>
-
-                            <svg class="calculator__decorative">
-                                <use href="./assets/images/sprite/sprite.svg#calculator-decorative-line"></use>
-                            </svg>
-                        </div>
-                    </ul><!-- /.sets__slider -->
+                                <svg class="calculator__decorative">
+                                    <use href="./assets/images/sprite/sprite.svg#calculator-decorative-line"></use>
+                                </svg>
+                            </li>
+                        </ul><!-- /.sets__slider -->
+                        <div class="swiper-pagination"></div>
+                    </div>
 
                     <div class="calculator calculator--mobile">
                         <div class="calculator__wrapper">
@@ -322,7 +345,7 @@
 
 
         <!-- Rations -->
-        <section class="section rations">
+        <section class="section rations" id="rations">
             <div class="container">
                 <div class="rations__header">
                     <h2 class="section__title rations__title">Рационы <span class="text-uppercase">ZOOOV</span></h2>
@@ -332,99 +355,103 @@
                     <p class="section__description rations__description">Система питания взрослой собаки не подойдет для щенка, поэтому мы создали разные <span><br></span>по составу рационы <span class="text-uppercase">ZOOOV</span>. Вы сможете заказать полноценное питание исходя из возраста, веса и даже вкусовых предпочтений вашего друга. <span class="text-uppercase">ZOOOV</span> заботится о каждой собаке.</p>
                 </div>
 
-                <ul class="rations__slider">
-                    <li class="rations__item rations-item">
-                        <a class="rations-item__link" href="#">
-                            <picture>
-                                <source srcset="./assets/images/rations/rations-1@1x.webp 1x, ./assets/images/rations/rations-1@2x.webp 2x" type="image/webp">
-                                <img class="rations-item__img img" src="./assets/images/rations/rations-1@1x.jpg" srcset="./assets/images/rations/rations-1@2x.jpg 2x" alt="Рацион для взрослых собак - индейка, говядина">
-                            </picture>
+                <div class="swiper swiper--primary">
+                    <ul class="rations__slider swiper-wrapper">
+                        <li class="rations__item rations-item swiper-slide">
+                            <a class="rations-item__link" href="#">
+                                <picture>
+                                    <source srcset="./assets/images/rations/rations-1@1x.webp 1x, ./assets/images/rations/rations-1@2x.webp 2x" type="image/webp">
+                                    <img class="rations-item__img img" src="./assets/images/rations/rations-1@1x.jpg" srcset="./assets/images/rations/rations-1@2x.jpg 2x" alt="Рацион для взрослых собак - индейка, говядина">
+                                </picture>
 
-                            <picture>
-                                <source srcset="./assets/images/rations/logo-turkey-beef@1x.webp 1x, ./assets/images/rations/logo-turkey-beef@2x.webp 2x" type="image/webp">
-                                <img class="rations-item__logo img" src="./assets/images/rations/logo-turkey-beef@1x.png" srcset="./assets/images/rations/logo-turkey-beef@2x.png 2x" alt="Логотип состава рациона - индейка, говядина">
-                            </picture>
-                        </a>
-                        <div class="rations-item__content">
-                            <h4 class="rations-item__title">
-                                <a href="#">Для взрослых собак</a>
-                            </h4>
-                            <p class="rations-item__composition">Индейка/Говядина</p>
-                            <p class="rations-item__description">Подходит для ежедневного кормления. Богат животными белками и Омега-3.</p>
-                            <p class="rations-item__weight">700г / 500г / 300г / 150г / 100г</p>
-                            <button class="rations-item__btn btn btn--secondary" type="button">Заказать</button>
-                        </div>
-                    </li>
+                                <picture>
+                                    <source srcset="./assets/images/rations/logo-turkey-beef@1x.webp 1x, ./assets/images/rations/logo-turkey-beef@2x.webp 2x" type="image/webp">
+                                    <img class="rations-item__logo img" src="./assets/images/rations/logo-turkey-beef@1x.png" srcset="./assets/images/rations/logo-turkey-beef@2x.png 2x" alt="Логотип состава рациона - индейка, говядина">
+                                </picture>
+                            </a>
+                            <div class="rations-item__content">
+                                <h4 class="rations-item__title">
+                                    <a href="#">Для взрослых собак</a>
+                                </h4>
+                                <p class="rations-item__composition">Индейка/Говядина</p>
+                                <p class="rations-item__description">Подходит для ежедневного кормления. Богат животными белками и Омега-3.</p>
+                                <p class="rations-item__weight">700г / 500г / 300г / 150г / 100г</p>
+                                <button class="rations-item__btn btn btn--secondary" type="button">Заказать</button>
+                            </div>
+                        </li>
 
-                    <li class="rations__item rations-item">
-                        <a class="rations-item__link" href="#">
-                            <picture>
-                                <source srcset="./assets/images/rations/rations-2@1x.webp 1x, ./assets/images/rations/rations-2@2x.webp 2x" type="image/webp">
-                                <img class="rations-item__img img" src="./assets/images/rations/rations-2@1x.jpg" srcset="./assets/images/rations/rations-2@2x.jpg 2x" alt="Рацион для щенков - индейка, говядина">
-                            </picture>
+                        <li class="rations__item rations-item swiper-slide">
+                            <a class="rations-item__link" href="#">
+                                <picture>
+                                    <source srcset="./assets/images/rations/rations-2@1x.webp 1x, ./assets/images/rations/rations-2@2x.webp 2x" type="image/webp">
+                                    <img class="rations-item__img img" src="./assets/images/rations/rations-2@1x.jpg" srcset="./assets/images/rations/rations-2@2x.jpg 2x" alt="Рацион для щенков - индейка, говядина">
+                                </picture>
 
-                            <picture>
-                                <source srcset="./assets/images/rations/logo-turkey-beef@1x.webp 1x, ./assets/images/rations/logo-turkey-beef@2x.webp 2x" type="image/webp">
-                                <img class="rations-item__logo img" src="./assets/images/rations/logo-turkey-beef@1x.png" srcset="./assets/images/rations/logo-turkey-beef@2x.png 2x" alt="Логотип состава рациона - индейка, говядина">
-                            </picture>
-                        </a>
-                        <div class="rations-item__content">
-                            <h4 class="rations-item__title">
-                                <a href="#">Для щенков</a>
-                            </h4>
-                            <p class="rations-item__composition">Индейка/Говядина</p>
-                            <p class="rations-item__description">Подходит для ежедневного кормления. Богат животными белками и Омега-3.</p>
-                            <p class="rations-item__weight">700г / 500г / 300г / 150г / 100г</p>
-                            <button class="rations-item__btn btn btn--secondary" type="button">Заказать</button>
-                        </div>
-                    </li>
+                                <picture>
+                                    <source srcset="./assets/images/rations/logo-turkey-beef@1x.webp 1x, ./assets/images/rations/logo-turkey-beef@2x.webp 2x" type="image/webp">
+                                    <img class="rations-item__logo img" src="./assets/images/rations/logo-turkey-beef@1x.png" srcset="./assets/images/rations/logo-turkey-beef@2x.png 2x" alt="Логотип состава рациона - индейка, говядина">
+                                </picture>
+                            </a>
+                            <div class="rations-item__content">
+                                <h4 class="rations-item__title">
+                                    <a href="#">Для щенков</a>
+                                </h4>
+                                <p class="rations-item__composition">Индейка/Говядина</p>
+                                <p class="rations-item__description">Подходит для ежедневного кормления. Богат животными белками и Омега-3.</p>
+                                <p class="rations-item__weight">700г / 500г / 300г / 150г / 100г</p>
+                                <button class="rations-item__btn btn btn--secondary" type="button">Заказать</button>
+                            </div>
+                        </li>
 
-                    <li class="rations__item rations-item">
-                        <a class="rations-item__link" href="#">
-                            <picture>
-                                <source srcset="./assets/images/rations/rations-3@1x.webp 1x, ./assets/images/rations/rations-3@2x.webp 2x" type="image/webp">
-                                <img class="rations-item__img img" src="./assets/images/rations/rations-3@1x.jpg" srcset="./assets/images/rations/rations-3@2x.jpg 2x" alt="Рацион для взрослых собак - индейка, говядина">
-                            </picture>
+                        <li class="rations__item rations-item swiper-slide">
+                            <a class="rations-item__link" href="#">
+                                <picture>
+                                    <source srcset="./assets/images/rations/rations-3@1x.webp 1x, ./assets/images/rations/rations-3@2x.webp 2x" type="image/webp">
+                                    <img class="rations-item__img img" src="./assets/images/rations/rations-3@1x.jpg" srcset="./assets/images/rations/rations-3@2x.jpg 2x" alt="Рацион для взрослых собак - индейка, говядина">
+                                </picture>
 
-                            <picture>
-                                <source srcset="./assets/images/rations/logo-mutton-rabbit@1x.webp 1x, ./assets/images/rations/logo-mutton-rabbit@2x.webp 2x" type="image/webp">
-                                <img class="rations-item__logo img" src="./assets/images/rations/logo-mutton-rabbit@1x.png" srcset="./assets/images/rations/logo-mutton-rabbit@2x.png 2x" alt="Логотип состава рациона - кролик, баранина">
-                            </picture>
-                        </a>
-                        <div class="rations-item__content">
-                            <h4 class="rations-item__title">
-                                <a href="#">Для взрослых собак</a>
-                            </h4>
-                            <p class="rations-item__composition">Индейка/Говядина</p>
-                            <p class="rations-item__description">Подходит для ежедневного кормления. Богат животными белками и Омега-3.</p>
-                            <p class="rations-item__weight">700г / 500г / 300г / 150г / 100г</p>
-                            <button class="rations-item__btn btn btn--secondary" type="button">Заказать</button>
-                        </div>
-                    </li>
+                                <picture>
+                                    <source srcset="./assets/images/rations/logo-mutton-rabbit@1x.webp 1x, ./assets/images/rations/logo-mutton-rabbit@2x.webp 2x" type="image/webp">
+                                    <img class="rations-item__logo img" src="./assets/images/rations/logo-mutton-rabbit@1x.png" srcset="./assets/images/rations/logo-mutton-rabbit@2x.png 2x" alt="Логотип состава рациона - кролик, баранина">
+                                </picture>
+                            </a>
+                            <div class="rations-item__content">
+                                <h4 class="rations-item__title">
+                                    <a href="#">Для взрослых собак</a>
+                                </h4>
+                                <p class="rations-item__composition">Индейка/Говядина</p>
+                                <p class="rations-item__description">Подходит для ежедневного кормления. Богат животными белками и Омега-3.</p>
+                                <p class="rations-item__weight">700г / 500г / 300г / 150г / 100г</p>
+                                <button class="rations-item__btn btn btn--secondary" type="button">Заказать</button>
+                            </div>
+                        </li>
 
-                    <li class="rations__item rations-item">
-                        <a class="rations-item__link" href="#">
-                            <picture>
-                                <source srcset="./assets/images/rations/rations-4@1x.webp 1x, ./assets/images/rations/rations-4@2x.webp 2x" type="image/webp">
-                                <img class="rations-item__img img" src="./assets/images/rations/rations-4@1x.jpg" srcset="./assets/images/rations/rations-4@2x.jpg 2x" alt="Рацион для взрослых собак - индейка, говядина">
-                            </picture>
+                        <li class="rations__item rations-item swiper-slide">
+                            <a class="rations-item__link" href="#">
+                                <picture>
+                                    <source srcset="./assets/images/rations/rations-4@1x.webp 1x, ./assets/images/rations/rations-4@2x.webp 2x" type="image/webp">
+                                    <img class="rations-item__img img" src="./assets/images/rations/rations-4@1x.jpg" srcset="./assets/images/rations/rations-4@2x.jpg 2x" alt="Рацион для взрослых собак - индейка, говядина">
+                                </picture>
 
-                            <picture>
-                                <source srcset="./assets/images/rations/logo-mutton-rabbit@1x.webp 1x, ./assets/images/rations/logo-mutton-rabbit@2x.webp 2x" type="image/webp">
-                                <img class="rations-item__logo img" src="./assets/images/rations/logo-mutton-rabbit@1x.png" srcset="./assets/images/rations/logo-mutton-rabbit@2x.png 2x" alt="Логотип состава рациона - кролик, баранина">
-                            </picture>
-                        </a>
-                        <div class="rations-item__content">
-                            <h4 class="rations-item__title">
-                                <a href="#">Для щенков</a>
-                            </h4>
-                            <p class="rations-item__composition">Индейка/Говядина</p>
-                            <p class="rations-item__description">Подходит для ежедневного кормления. Богат животными белками и Омега-3.</p>
-                            <p class="rations-item__weight">700г / 500г / 300г / 150г / 100г</p>
-                            <button class="rations-item__btn btn btn--secondary" type="button">Заказать</button>
-                        </div>
-                    </li>
-                </ul><!-- /.rations-slider -->
+                                <picture>
+                                    <source srcset="./assets/images/rations/logo-mutton-rabbit@1x.webp 1x, ./assets/images/rations/logo-mutton-rabbit@2x.webp 2x" type="image/webp">
+                                    <img class="rations-item__logo img" src="./assets/images/rations/logo-mutton-rabbit@1x.png" srcset="./assets/images/rations/logo-mutton-rabbit@2x.png 2x" alt="Логотип состава рациона - кролик, баранина">
+                                </picture>
+                            </a>
+                            <div class="rations-item__content">
+                                <h4 class="rations-item__title">
+                                    <a href="#">Для щенков</a>
+                                </h4>
+                                <p class="rations-item__composition">Индейка/Говядина</p>
+                                <p class="rations-item__description">Подходит для ежедневного кормления. Богат животными белками и Омега-3.</p>
+                                <p class="rations-item__weight">700г / 500г / 300г / 150г / 100г</p>
+                                <button class="rations-item__btn btn btn--secondary" type="button">Заказать</button>
+                            </div>
+                        </li>
+                    </ul><!-- /.rations-slider -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
             </div><!-- /.container -->
         </section>
 
@@ -434,15 +461,78 @@
             <div class="norms">
                 <div class="container">
                     <div class="norms__header">
-                        <h2 class="norms__title">Рекомендованные нормы кормления</h2>
+                        <h2 class="norms__title text-uppercase">Рекомендованные <span><br></span> нормы кормления</h2>
                     </div>
-                    <div class="norms__wrapper">
-                        <h3 class="norms__item-title--tabs">Для взрослых</h3>
-                        <div class="norms__item">
-                            <h3 class="norms__item-title">Для взрослых собак</h3>
-                            <p class="norms__age">от 1 года</p>
-                            <div class="norms__inner">
-                                <table class="norms__table">
+                    <div class="norms__slider-swiper swiper">
+                        <div class="norms__slider-pagination"></div>
+                        <div class="norms__slider-pagination-mobile"></div>
+                        <div class="norms__wrapper swiper-wrapper">
+                            <div class="norms__item swiper-slide">
+                                <h3 class="norms__item-title text-uppercase">Для взрослых собак</h3>
+                                <p class="norms__age">от 1 года</p>
+                                <div class="norms__inner">
+                                    <table class="norms__table">
+                                        <thead>
+                                            <tr class="norms__table-row">
+                                                <th class="norms__table-heading">Вес собаки</th>
+                                                <th class="norms__table-heading">Суточная норма</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-date">5кг</td>
+                                                <td class="norms__table-data">100 - 150гр</td>
+                                            </tr>
+
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-data">7кг</td>
+                                                <td class="norms__table-data">140 - 210гр</td>
+                                            </tr>
+
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-data">10кг</td>
+                                                <td class="norms__table-data">200 - 300гр</td>
+                                            </tr>
+
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-data">12кг</td>
+                                                <td class="norms__table-data">240 - 360гр</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="norms__table">
+                                        <thead>
+                                            <tr class="norms__table-row">
+                                                <th class="norms__table-heading">Вес собаки</th>
+                                                <th class="norms__table-heading">Суточная норма</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-data">15кг</td>
+                                                <td class="norms__table-data">300 - 450гр</td>
+                                            </tr>
+
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-data">17кг</td>
+                                                <td class="norms__table-data">340 - 510гр</td>
+                                            </tr>
+
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-data">20кг</td>
+                                                <td class="norms__table-data">400 - 600гр</td>
+                                            </tr>
+
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-data">25кг</td>
+                                                <td class="norms__table-data">500 - 750гр</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div><!-- ./norms__inner -->
+
+                                <table class="norms__table norms__table--tabs">
                                     <thead>
                                         <tr class="norms__table-row">
                                             <th class="norms__table-heading">Вес собаки</th>
@@ -451,7 +541,7 @@
                                     </thead>
                                     <tbody>
                                         <tr class="norms__table-row">
-                                            <td class="norms__table-date">5кг</td>
+                                            <td class="norms__table-data">5кг</td>
                                             <td class="norms__table-data">100 - 150гр</td>
                                         </tr>
 
@@ -469,17 +559,7 @@
                                             <td class="norms__table-data">12кг</td>
                                             <td class="norms__table-data">240 - 360гр</td>
                                         </tr>
-                                    </tbody>
-                                </table>
 
-                                <table class="norms__table">
-                                    <thead>
-                                        <tr class="norms__table-row">
-                                            <th class="norms__table-heading">Вес собаки</th>
-                                            <th class="norms__table-heading">Суточная норма</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
                                         <tr class="norms__table-row">
                                             <td class="norms__table-data">15кг</td>
                                             <td class="norms__table-data">300 - 450гр</td>
@@ -501,67 +581,76 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div><!-- ./norms__inner -->
 
-                            <table class="norms__table norms__table--tabs">
-                                <thead>
-                                    <tr class="norms__table-row">
-                                        <th class="norms__table-heading">Вес собаки</th>
-                                        <th class="norms__table-heading">Суточная норма</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">5кг</td>
-                                        <td class="norms__table-data">100 - 150гр</td>
-                                    </tr>
+                                <p class="norms__info"><span>Суточная норма кормления</span> составляет<span> 2&#8209;3%* </span>от<span> идеального </span>веса собаки.</p>
+                            </div><!-- ./norms__item -->
 
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">7кг</td>
-                                        <td class="norms__table-data">140 - 210гр</td>
-                                    </tr>
+                            <div class="norms__item swiper-slide">
+                                <h3 class="norms__item-title text-uppercase">Для щенков</h3>
+                                <p class="norms__age">до 1 года</p>
+                                <div class="norms__inner">
+                                    <table class="norms__table">
+                                        <thead>
+                                            <tr class="norms__table-row">
+                                                <th class="norms__table-heading">Вес собаки</th>
+                                                <th class="norms__table-heading">Суточная норма</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-data">2кг</td>
+                                                <td class="norms__table-data">100гр</td>
+                                            </tr>
 
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">10кг</td>
-                                        <td class="norms__table-data">200 - 300гр</td>
-                                    </tr>
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-data">5кг</td>
+                                                <td class="norms__table-data">250гр</td>
+                                            </tr>
 
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">12кг</td>
-                                        <td class="norms__table-data">240 - 360гр</td>
-                                    </tr>
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-data">7кг</td>
+                                                <td class="norms__table-data">350гр</td>
+                                            </tr>
 
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">15кг</td>
-                                        <td class="norms__table-data">300 - 450гр</td>
-                                    </tr>
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-data">10кг</td>
+                                                <td class="norms__table-data">500гр</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">17кг</td>
-                                        <td class="norms__table-data">340 - 510гр</td>
-                                    </tr>
+                                    <table class="norms__table">
+                                        <thead>
+                                            <tr class="norms__table-row">
+                                                <th class="norms__table-heading">Вес собаки</th>
+                                                <th class="norms__table-heading">Суточная норма</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-data">12кг</td>
+                                                <td class="norms__table-data">600гр</td>
+                                            </tr>
 
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">20кг</td>
-                                        <td class="norms__table-data">400 - 600гр</td>
-                                    </tr>
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-data">15кг</td>
+                                                <td class="norms__table-data">750гр</td>
+                                            </tr>
 
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">25кг</td>
-                                        <td class="norms__table-data">500 - 750гр</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-data">17кг</td>
+                                                <td class="norms__table-data">850гр</td>
+                                            </tr>
 
-                            <p class="norms__info"><span>Суточная норма кормления</span> составляет<span> 2&#8209;3%* </span>от<span> идеального </span>веса собаки.</p>
-                        </div><!-- ./norms__item -->
+                                            <tr class="norms__table-row">
+                                                <td class="norms__table-data">20кг</td>
+                                                <td class="norms__table-data">1000гр</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
 
-                        <!-- <h3 class="norms__item-title--tabs">Для щенков</h3> -->
-                        <div class="norms__item">
-                            <h3 class="norms__item-title">Для щенков</h3>
-                            <p class="norms__age">до 1 года</p>
-                            <div class="norms__inner">
-                                <table class="norms__table">
+                                <table class="norms__table norms__table--tabs">
                                     <thead>
                                         <tr class="norms__table-row">
                                             <th class="norms__table-heading">Вес собаки</th>
@@ -588,17 +677,7 @@
                                             <td class="norms__table-data">10кг</td>
                                             <td class="norms__table-data">500гр</td>
                                         </tr>
-                                    </tbody>
-                                </table>
 
-                                <table class="norms__table">
-                                    <thead>
-                                        <tr class="norms__table-row">
-                                            <th class="norms__table-heading">Вес собаки</th>
-                                            <th class="norms__table-heading">Суточная норма</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
                                         <tr class="norms__table-row">
                                             <td class="norms__table-data">12кг</td>
                                             <td class="norms__table-data">600гр</td>
@@ -620,61 +699,11 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
 
-                            <table class="norms__table norms__table--tabs">
-                                <thead>
-                                    <tr class="norms__table-row">
-                                        <th class="norms__table-heading">Вес собаки</th>
-                                        <th class="norms__table-heading">Суточная норма</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">2кг</td>
-                                        <td class="norms__table-data">100гр</td>
-                                    </tr>
-
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">5кг</td>
-                                        <td class="norms__table-data">250гр</td>
-                                    </tr>
-
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">7кг</td>
-                                        <td class="norms__table-data">350гр</td>
-                                    </tr>
-
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">10кг</td>
-                                        <td class="norms__table-data">500гр</td>
-                                    </tr>
-
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">12кг</td>
-                                        <td class="norms__table-data">600гр</td>
-                                    </tr>
-
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">15кг</td>
-                                        <td class="norms__table-data">750гр</td>
-                                    </tr>
-
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">17кг</td>
-                                        <td class="norms__table-data">850гр</td>
-                                    </tr>
-
-                                    <tr class="norms__table-row">
-                                        <td class="norms__table-data">20кг</td>
-                                        <td class="norms__table-data">1000гр</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <p class="norms__info"><span>Суточная норма кормления </span>составляет<span> 5%* </span>от<span> идеального </span> веса собаки.</p>
-                        </div><!-- ./norms__item -->
-                    </div><!-- /.norms__wrapper -->
+                                <p class="norms__info"><span>Суточная норма кормления </span>составляет<span> 5%* </span>от<span> идеального </span> веса собаки.</p>
+                            </div><!-- ./norms__item -->
+                        </div><!-- /.norms__wrapper -->
+                    </div>
 
                     <p class="norms__footer">*Общие рекомендации. Некоторым собакам нужен бОльший % в зависимости от их активности и индивидуальных особенностей организма.</p>
                 </div><!-- /.container -->
@@ -683,7 +712,7 @@
 
 
         <!-- Otherness -->
-        <section class="section">
+        <section class="section" id="otherness">
             <div class="otherness">
                 <div class="container">
                     <h2 class="otherness__section-title otherness__section-title--rays section__title section__title--rays">Почему <span class="text-uppercase">ZOOOV</span></h2>
@@ -722,7 +751,7 @@
 
 
         <!-- About-us -->
-        <section class="section">
+        <section class="section" id="about-us">
             <div class="about-us">
                 <div class="container">
                     <div class="about-us__wrapper">
@@ -776,7 +805,7 @@
 
 
         <!-- Delivery -->
-        <section class="section">
+        <section class="section" id="delivery">
             <div class="container">
                 <h2 class="section__title">Как получить <span class="text-uppercase">ZOOOV</span>?</h2>
 
@@ -806,13 +835,13 @@
 
 
         <!-- Faq -->
-        <section class="section">
+        <section class="section" id="faq">
             <div class="container">
                 <div class="faq">
                     <h2 class="section__title faq__title">Частые вопросы</h2>
 
                     <div class="faq__wrapper">
-                        <div class="faq__item faq__item--active">
+                        <div class="faq__item">
                             <div class="faq__header">
                                 <h3 class="faq__item-title">Не опасны ли бактерии, которые находятся в сыром мясе?</h3>
                                 <button class="faq__btn">
@@ -833,6 +862,9 @@
                                     <span class="faq__btn-vertical-line"></span>
                                 </button>
                             </div>
+                            <div class="faq__content">
+                                У здоровых собак отличная иммунная система, готовая ко всем видам бактерий. Рацион <span class="text-uppercase">BARF</span> как раз укрепит иммунитет вашей собаки и защитит ее от влияния бактерий, которые находятся на улице или даже в вашем доме.
+                            </div>
                         </div>
 
                         <div class="faq__item">
@@ -842,6 +874,9 @@
                                     <span class="faq__btn-horizontal-line"></span>
                                     <span class="faq__btn-vertical-line"></span>
                                 </button>
+                            </div>
+                            <div class="faq__content">
+                                У здоровых собак отличная иммунная система, готовая ко всем видам бактерий. Рацион <span class="text-uppercase">BARF</span> как раз укрепит иммунитет вашей собаки и защитит ее от влияния бактерий, которые находятся на улице или даже в вашем доме.
                             </div>
                         </div>
 
@@ -853,6 +888,9 @@
                                     <span class="faq__btn-vertical-line"></span>
                                 </button>
                             </div>
+                            <div class="faq__content">
+                                У здоровых собак отличная иммунная система, готовая ко всем видам бактерий. Рацион <span class="text-uppercase">BARF</span> как раз укрепит иммунитет вашей собаки и защитит ее от влияния бактерий, которые находятся на улице или даже в вашем доме.
+                            </div>
                         </div>
 
                         <div class="faq__item">
@@ -862,6 +900,9 @@
                                     <span class="faq__btn-horizontal-line"></span>
                                     <span class="faq__btn-vertical-line"></span>
                                 </button>
+                            </div>
+                            <div class="faq__content">
+                                У здоровых собак отличная иммунная система, готовая ко всем видам бактерий. Рацион <span class="text-uppercase">BARF</span> как раз укрепит иммунитет вашей собаки и защитит ее от влияния бактерий, которые находятся на улице или даже в вашем доме.
                             </div>
                         </div>
 
@@ -873,6 +914,9 @@
                                     <span class="faq__btn-vertical-line"></span>
                                 </button>
                             </div>
+                            <div class="faq__content">
+                                У здоровых собак отличная иммунная система, готовая ко всем видам бактерий. Рацион <span class="text-uppercase">BARF</span> как раз укрепит иммунитет вашей собаки и защитит ее от влияния бактерий, которые находятся на улице или даже в вашем доме.
+                            </div>
                         </div>
 
                         <div class="faq__item">
@@ -882,6 +926,9 @@
                                     <span class="faq__btn-horizontal-line"></span>
                                     <span class="faq__btn-vertical-line"></span>
                                 </button>
+                            </div>
+                            <div class="faq__content">
+                                У здоровых собак отличная иммунная система, готовая ко всем видам бактерий. Рацион <span class="text-uppercase">BARF</span> как раз укрепит иммунитет вашей собаки и защитит ее от влияния бактерий, которые находятся на улице или даже в вашем доме.
                             </div>
                         </div>
 
@@ -893,6 +940,9 @@
                                     <span class="faq__btn-vertical-line"></span>
                                 </button>
                             </div>
+                            <div class="faq__content">
+                                У здоровых собак отличная иммунная система, готовая ко всем видам бактерий. Рацион <span class="text-uppercase">BARF</span> как раз укрепит иммунитет вашей собаки и защитит ее от влияния бактерий, которые находятся на улице или даже в вашем доме.
+                            </div>
                         </div>
 
                         <div class="faq__item">
@@ -903,6 +953,9 @@
                                     <span class="faq__btn-vertical-line"></span>
                                 </button>
                             </div>
+                            <div class="faq__content">
+                                У здоровых собак отличная иммунная система, готовая ко всем видам бактерий. Рацион <span class="text-uppercase">BARF</span> как раз укрепит иммунитет вашей собаки и защитит ее от влияния бактерий, которые находятся на улице или даже в вашем доме.
+                            </div>
                         </div>
                     </div><!-- /.faq__wrapper -->
                 </div><!-- /.faq -->
@@ -910,7 +963,9 @@
         </section>
     </main>
 
-    <footer class="footer">
+
+    <!-- Footer -->
+    <footer class="footer" id="contacts">
         <div class="footer__inner">
             <div class="container">
                 <div class="footer__wrapper">
@@ -1001,6 +1056,10 @@
         </div><!-- /.copyright -->
     </footer>
 
-</div>
+</div><!-- /.page -->
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="./assets/js/app.min.js"></script>
 </body>
 </html>

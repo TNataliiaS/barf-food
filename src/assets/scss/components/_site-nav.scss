@@ -2,7 +2,30 @@
     @extend %flex-align-center;
 
     @include breakpoint($breakpoint-lg) {
-        display: none;
+        width: 100%;
+        height: calc(100vh + 70px);
+        overflow: auto;
+        flex-direction: column;
+        padding-top: 116px;
+
+        background-color: $primary-color;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        transform: translateX(100%);
+
+        transition: transform .2s ease-out;
+
+        &--show {
+            transform: translateX(0);
+
+            > .site-nav__decorative {
+                display: block;
+            }
+        }
     }
 
     &__item {
@@ -10,6 +33,14 @@
 
         &:last-child {
             margin-right: 12px;
+
+            @include breakpoint($breakpoint-lg) {
+                margin-right: 0;
+            }
+        }
+
+        @include breakpoint($breakpoint-lg) {
+            margin-right: 0;
         }
     }
 
@@ -22,6 +53,17 @@
         position: relative;
 
         transition: opacity .1s linear;
+
+        @include breakpoint($breakpoint-lg) {
+            display: block;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-bottom: 24px;
+
+            font-size: 24px;
+            font-weight: 600;
+            color: $secondary-color;
+        }
 
         &:after {
             content: '';
@@ -37,7 +79,12 @@
             opacity: 0;
 
             transform: translateX(-50%);
+
             transition: opacity .2s linear;
+
+            @include breakpoint($breakpoint-lg) {
+                display: none;
+            }
         }
 
         &:hover {
@@ -48,6 +95,40 @@
 
         &:active {
             opacity: .7;
+        }
+    }
+
+    &__decorative {
+        display: none;
+
+        fill: $element-color;
+        position: absolute;
+
+        &--one {
+            width: 147px;
+            height: 258px;
+
+            top: 145px;
+            left: -56px;
+            transform: rotate(195deg);
+        }
+
+        &--two {
+            width: 276px;
+            height: 289px;
+
+            top: 374px;
+            right: -155px;
+            transform: rotate(37deg);
+        }
+
+        &--rays {
+            width: 49px;
+            height: 56px;
+
+            top: 608px;
+            right: 57px;
+            transform: rotate(274deg);
         }
     }
 }

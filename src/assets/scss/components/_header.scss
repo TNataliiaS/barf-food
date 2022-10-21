@@ -1,11 +1,71 @@
 .header {
     width: 100%;
 
-    position: fixed;
+    background-color: transparent;
+
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+
+    &.header--fixed {
+        position: fixed;
+        background-color: $primary-color;
+
+        animation: fadeInUp .2s ease-out;
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                top: -20px;
+            }
+
+            100% {
+                opacity: 1;
+                top: 0;
+            }
+        }
+
+        & .header__nav {
+            height: 80px;
+
+            @include breakpoint($breakpoint-xs) {
+                height: 58px;
+            }
+
+            & .logo {
+                width: 62px;
+                height: 62px;
+
+                @include breakpoint($breakpoint-xs) {
+                    width: 38px;
+                    height: 38px;
+
+                    align-self: center;
+                }
+            }
+
+            & .site-nav__link {
+                color: $secondary-color;
+            }
+
+            & .burger__line {
+                @include breakpoint($breakpoint-lg) {
+                    width: 27px;
+                    background-color: $secondary-color;
+                }
+            }
+
+            & .burger--active .burger__line {
+                @include breakpoint($breakpoint-lg) {
+                    &:nth-child(2) {
+                        width: 0;
+                    }
+                }
+            }
+        }
+    }
 
     &__nav {
         display: flex;

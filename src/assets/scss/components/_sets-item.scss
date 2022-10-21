@@ -51,7 +51,7 @@
         color: $secondary-color;
         cursor: pointer;
 
-        transform: opacity .1s linear;
+        transition: opacity .1s linear;
 
         &:hover {
             opacity: .7;

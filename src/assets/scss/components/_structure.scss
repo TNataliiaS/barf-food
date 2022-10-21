@@ -65,13 +65,11 @@
                 position: absolute;
                 top: -24px;
                 left: -20px;
-
                 transform: rotate(192deg);
 
                 @include breakpoint($breakpoint-sm) {
                     top: -19px;
                     left: 26px;
-
                     transform: rotate(287deg);
                 }
             }
@@ -81,6 +79,7 @@
     &__title {
         font-size: 18px;
         font-weight: 600;
+
         line-height: 1.3;
     }
 }

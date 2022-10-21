@@ -1,5 +1,5 @@
 .otherness {
-    padding: 3px 0 10px;
+    padding: 3px 0 8px;
     position: relative;
 
     @include breakpoint($breakpoint-sm) {
@@ -8,7 +8,11 @@
     }
 
     &__item {
-        padding-top: 55px;
+        padding-top: 56px;
+
+        @include breakpoint($breakpoint-xs) {
+            padding-top: 55px;
+        }
 
         &--leaf {
             &:before {
@@ -37,7 +41,7 @@
 
     &__section-title {
         display: inline-block;
-        margin-bottom: 57px;
+        margin-bottom: 59px;
 
         line-height: 1.2;
 
@@ -91,6 +95,7 @@
     &__decorative {
         width: 1440px;
         height: 236px;
+
         stroke: $section-accent-color;
         fill: transparent;
 
@@ -98,7 +103,6 @@
         top: 65px;
         left: 50%;
         z-index: -1;
-
         transform: translateX(-50%);
 
         @include breakpoint($breakpoint-sm) {

@@ -45,8 +45,7 @@
         &--decorative-line-one {
             left: -173px;
             bottom: 67px;
-
-           transform: rotate(-150deg);
+            transform: rotate(-150deg);
 
            @include breakpoint($breakpoint-xxl) {
                 display: none;
@@ -57,7 +56,6 @@
 
                 left: 160px;
                 bottom: -56px;
-
                 transform: rotate(-270deg);
             }
         }
@@ -70,7 +68,6 @@
 
             top: 158px;
             left: 34px;
-
             transform: rotate(88deg);
 
             @include breakpoint($breakpoint-xxl) {
@@ -83,7 +80,6 @@
                 top: auto;
                 bottom: 66px;
                 left: 131px;
-
                 transform: rotate(-32deg);
             }
         }
@@ -120,7 +116,6 @@
 
             top: 267px;
             right: 100px;
-
             transform: rotate(-123deg);
 
             @include breakpoint($breakpoint-xxl) {
@@ -175,7 +170,6 @@
 
             top: 261px;
             left: 436px;
-
             transform: rotate(-68deg);
 
             @include breakpoint($breakpoint-xxl) {
@@ -233,7 +227,6 @@
 
             bottom: 8px;
             right: 41px;
-
             transform: scale(-1, 1);
 
             @include breakpoint($breakpoint-xxl) {
@@ -246,6 +239,7 @@
 
             @include breakpoint($breakpoint-xs) {
                 display: block;
+
                 bottom: 84px;
                 right: 239px;
             }
