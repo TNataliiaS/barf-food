@@ -13,7 +13,7 @@
         grid-row: 1;
     }
 
-    @include breakpoint($breakpoint-xs) {
+    @include breakpoint($breakpoint-sm) {
         display: none;
         width: 100%;
     }
@@ -23,7 +23,7 @@
         grid-column: 1 / -1;
         padding: 0;
 
-        @include breakpoint($breakpoint-xs) {
+        @include breakpoint($breakpoint-sm) {
             display: block;
         }
     }
@@ -70,7 +70,6 @@
         position: absolute;
         top: 321px;
         left: -249px;
-
         transform: rotate(-40.6deg);
     }
 
@@ -87,4 +86,5 @@
             margin-left: -10px;
         }
     }
+
 }

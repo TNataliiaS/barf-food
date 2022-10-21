@@ -22,12 +22,19 @@
 
     &__link {
         margin-bottom: 25px;
+        overflow: hidden;
+
+        &:hover img {
+            transform: scale(1.1);
+        }
     }
 
     &__img {
         width: 100%;
         height: 335px;
         object-fit: cover;
+
+        transition: transform .2s linear;
     }
 
     &__content {
@@ -42,6 +49,13 @@
         font-weight: 700;
         line-height: 1.3;
         color: $secondary-color;
+        cursor: pointer;
+
+        transition: opacity .1s linear;
+
+        &:hover {
+            opacity: .7;
+        }
     }
 
     &__list {

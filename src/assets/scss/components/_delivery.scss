@@ -55,6 +55,17 @@
                 top: 12px;
                 right: 25px;
 
+                animation: translateX 1s linear infinite alternate;
+
+                @keyframes translateX {
+                    from {
+                        transform: translateX(-10px);
+                    }
+                    to {
+                        transform: translateX(10px);
+                    }
+                }
+
                 @include breakpoint($breakpoint-xs) {
                     display: none;
                 }
@@ -75,6 +86,8 @@
     }
 
     &__description {
+        margin: 0;
+
         span {
             color: $color-сomponents;
         }

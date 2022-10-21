@@ -116,6 +116,7 @@
         & + label {
             display: inline-flex;
             user-select: none;
+            cursor: pointer;
         }
         & + label:before {
             content: '';
@@ -170,17 +171,6 @@
         }
 
         .btn {
-            padding-left: 60px;
-            padding-right: 60px;
-
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 140%;
-            color: #EC7973;
-
-            background: $section-accent-color;
-            border-radius: 8px;
-
             @include breakpoint($breakpoint-xs) {
                 width: 100%;
                 border-radius: 2px;
