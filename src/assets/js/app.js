@@ -1,8 +1,5 @@
 'use strict';
-document.addEventListener('DOMContentLoaded', pageInteractive);
-window.addEventListener('resize', pageInteractive);
-
-function pageInteractive () {
+document.addEventListener('DOMContentLoaded', function () {
     // Smooth scoll element
     // ****************
     const links = document.querySelectorAll('.site-nav__link');
@@ -132,6 +129,7 @@ function pageInteractive () {
                 slidesPerView: 'auto',
             },
         },
+        spaceBetween: 24,
         slidesPerView: 2,
     });
 
@@ -149,4 +147,37 @@ function pageInteractive () {
             }
         }
     ));
-}
+});
+
+window.addEventListener('resize', function () {
+    const normsSlider = new Swiper('.norms__slider-swiper', {
+        pagination: {
+            el: '.norms__slider-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                pagination: {
+                    el: '.norms__slider-pagination-mobile',
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        let labels = ['Для взрослых', 'Для щенков'];
+                        return '<span class="' + className + '">' + (labels[index]) + '</span>';
+                    }
+                },
+            },
+
+            376: {
+                slidesPerView: 2,
+                slidesPerColumn: 2,
+            },
+
+            576: {
+                slidesPerView: 'auto',
+            },
+        },
+        spaceBetween: 24,
+        slidesPerView: 2,
+    });
+});
