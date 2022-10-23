@@ -79,8 +79,7 @@
     }
 
     &__slider {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        display: flex;
         padding-bottom: 45px;
 
         @include breakpoint($breakpoint-sm) {
@@ -90,31 +89,7 @@
 
     &__item {
         display: block;
-        width: 280px;
-
-        &.rations-item.swiper-slide {
-            width: 280px !important;
-        }
-
-        @include breakpoint($breakpoint-xs) {
-            grid-column: 1 / -1;
-        }
-
-        &:first-child {
-            grid-column: 1 /span 3;
-        }
-
-        &:nth-child(2) {
-            grid-column: 4 / span 3;
-        }
-
-        &:nth-child(3) {
-            grid-column: 7 / span 3;
-        }
-
-        &:last-child {
-            grid-column: 10 / -1;
-        }
+        width: 282px;
     }
 
     .swiper-horizontal>.swiper-pagination-bullets {

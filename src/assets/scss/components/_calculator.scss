@@ -1,7 +1,6 @@
 .calculator {
-    width: 280px;
+    width: 282px;
     padding: 35px 25px 25px;
-    grid-column: 10 / -1;
     overflow: hidden;
 
     background-color: $element-color;
@@ -9,18 +8,16 @@
     position: relative;
 
     @include breakpoint($breakpoint-xxl) {
-        grid-column: 1 / span 3;
-        grid-row: 1;
+        order: 1;
     }
 
     @include breakpoint($breakpoint-sm) {
         display: none;
-        width: 100%;
     }
 
     &--mobile {
+        width: 100%;
         display: none;
-        grid-column: 1 / -1;
         padding: 0;
 
         @include breakpoint($breakpoint-sm) {

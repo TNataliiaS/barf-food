@@ -97,10 +97,13 @@ function css() {
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
+            grid: true,
+            overrideBrowserslist: ["last 3 versions"],
             cascade: true
         }))
         .pipe(gcmq())
-        .pipe(gulp.dest(path.build.css))
+        // Создание несжатого файла
+        // .pipe(gulp.dest(path.build.css))
         .pipe(cleanCSS({
             level: {
                 1: {

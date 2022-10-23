@@ -23,7 +23,7 @@
         &--show {
             transform: translateX(0);
 
-            > .site-nav__decorative {
+            > .site-nav__decorative svg {
                 display: block;
             }
         }
@@ -32,7 +32,7 @@
     &__item {
         margin-right: 33px;
 
-        &:last-child {
+        &:nth-child(7) {
             margin-right: 12px;
 
             @include breakpoint($breakpoint-lg) {
@@ -100,12 +100,14 @@
     }
 
     &__decorative {
-        display: none;
+        svg {
+            display: none;
 
-        fill: $element-color;
-        position: absolute;
+            fill: $element-color;
+            position: absolute;
+        }
 
-        &--one {
+        &--one svg {
             width: 147px;
             height: 258px;
 
@@ -114,7 +116,7 @@
             transform: rotate(195deg);
         }
 
-        &--two {
+        &--two svg {
             width: 276px;
             height: 289px;
 
@@ -123,7 +125,7 @@
             transform: rotate(37deg);
         }
 
-        &--rays {
+        &--rays svg {
             width: 49px;
             height: 56px;
 
