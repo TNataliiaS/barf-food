@@ -1,5 +1,5 @@
 'use strict';
-window.addEventListener('DOMContentLoaded', pageInteractive);
+document.addEventListener('DOMContentLoaded', pageInteractive);
 window.addEventListener('resize', pageInteractive);
 
 function pageInteractive () {
