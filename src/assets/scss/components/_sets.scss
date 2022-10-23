@@ -29,8 +29,7 @@
     }
 
     &__slider-wrapper {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        display: flex;
         padding-bottom: 37px;
     }
 
@@ -92,29 +91,23 @@
     }
 
     &__item {
-        width: 280px;
+        width: 282px;
 
         &:first-child {
-            grid-column: 1 / span 3;
-
             @include breakpoint($breakpoint-xxl) {
-                grid-column: 4 / span 3;
+                order: 2;
             }
         }
 
         &:nth-child(2) {
-            grid-column: 4 / span 3;
-
             @include breakpoint($breakpoint-xxl) {
-                grid-column: 7 / span 3;
+                order: 3;
             }
         }
 
         &:nth-child(3) {
-            grid-column: 7 / span 3;
-
             @include breakpoint($breakpoint-xxl) {
-                grid-column: 10 / -1;
+                order: 4;
             }
         }
     }
